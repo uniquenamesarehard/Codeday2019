@@ -11,6 +11,7 @@
 render_priority = 0
 shader = ExtResource( 2 )
 shader_param/color = null
+shader_param/OCTAVES = null
 
 [sub_resource type="OccluderPolygon2D" id=1]
 
@@ -36,8 +37,9 @@ _sections_unfolded = [ "Material", "Visibility" ]
 
 modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
 material = SubResource( 3 )
-position = Vector2( 570, 280 )
-scale = Vector2( 0.631797, 0.424902 )
+position = Vector2( 562.568, 127.938 )
+rotation = 0.00017551
+scale = Vector2( 0.729445, 0.849416 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
