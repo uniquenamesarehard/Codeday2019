@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://white.png" type="Texture" id=1]
 [ext_resource path="res://light0.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://black.png" type="Texture" id=4]
 [ext_resource path="res://Trenchcoat img.png" type="Texture" id=5]
 [ext_resource path="res://fog.shader" type="Shader" id=6]
+[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=2]
 
@@ -122,10 +123,16 @@ _sections_unfolded = [ "Visibility" ]
 
 modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
 material = SubResource( 1 )
-position = Vector2( 562.568, 127.938 )
+position = Vector2( 586.145, 130.512 )
 rotation = 0.00017551
 scale = Vector2( 0.729445, 0.849416 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
+
+[node name="BGEntranceWallPaper" type="Sprite" parent="." index="7"]
+
+position = Vector2( 44.9942, 55.1203 )
+scale = Vector2( 0.309097, 0.309097 )
+texture = ExtResource( 7 )
 
 
