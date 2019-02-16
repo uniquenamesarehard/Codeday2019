@@ -12,4 +12,9 @@ func _ready():
 func _process(delta):
 	rotation = self.rotation + deg2rad(90*delta)
 	
-	translate(Vector2(-1000*delta,0))
+	translate(Vector2(-100*delta,0))
+	if(position.x<-0.5):
+		position = Vector2(get_viewport().size.x, get_viewport().size.y/2)
+		
+	#if(position.y>-0.5):
+		#position = Vector2(get_viewport().size.x/2, get_viewport().size.y)
