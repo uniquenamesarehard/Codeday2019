@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lightO.png-3cd5cf6c43dd894346d8600ec976f8d6.stex"
+path="res://.import/test sprite.png-1e5989bb44905d15304afba0d2bbc75b.stex"
 
 [deps]
 
-source_file="res://lightO.png"
-dest_files=[ "res://.import/lightO.png-3cd5cf6c43dd894346d8600ec976f8d6.stex" ]
+source_file="res://test sprite.png"
+dest_files=[ "res://.import/test sprite.png-1e5989bb44905d15304afba0d2bbc75b.stex" ]
 
 [params]
 
