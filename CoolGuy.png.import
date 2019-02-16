@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lightO.png-3cd5cf6c43dd894346d8600ec976f8d6.stex"
+path="res://.import/CoolGuy.png-af4bc4e10022947a1d126e66098db9fd.stex"
 
 [deps]
 
-source_file="res://lightO.png"
-dest_files=[ "res://.import/lightO.png-3cd5cf6c43dd894346d8600ec976f8d6.stex" ]
+source_file="res://CoolGuy.png"
+dest_files=[ "res://.import/CoolGuy.png-af4bc4e10022947a1d126e66098db9fd.stex" ]
 
 [params]
 
