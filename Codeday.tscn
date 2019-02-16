@@ -1,23 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://white.png" type="Texture" id=1]
-[ext_resource path="res://fog.shader" type="Shader" id=2]
-[ext_resource path="res://lightO.png" type="Texture" id=3]
-[ext_resource path="res://Light2D.gd" type="Script" id=4]
-[ext_resource path="res://black.png" type="Texture" id=5]
+[ext_resource path="res://light0.png" type="Texture" id=2]
+[ext_resource path="res://Light2D.gd" type="Script" id=3]
+[ext_resource path="res://black.png" type="Texture" id=4]
+[ext_resource path="res://Trenchcoat img.png" type="Texture" id=5]
+[ext_resource path="res://fog.shader" type="Shader" id=6]
 
-[sub_resource type="ShaderMaterial" id=3]
-
-render_priority = 0
-shader = ExtResource( 2 )
-shader_param/color = null
-shader_param/OCTAVES = null
-
-[sub_resource type="OccluderPolygon2D" id=1]
+[sub_resource type="OccluderPolygon2D" id=2]
 
 closed = true
 cull_mode = 0
 polygon = PoolVector2Array( -1050, -750, 1050, -750, 1050, 750, -1050, 750 )
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 6 )
+shader_param/color = null
+shader_param/OCTAVES = null
+_sections_unfolded = [ "shader_param" ]
 
 [node name="Codeday" type="Node2D" index="0"]
 
@@ -29,27 +31,18 @@ __meta__ = {
 
 modulate = Color( 0.419235, 0.481391, 0.613281, 1 )
 position = Vector2( 570, 280 )
+rotation = -3.45489e-11
 scale = Vector2( 0.631797, 0.424902 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
-[node name="white2" type="Sprite" parent="." index="1"]
-
-modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
-material = SubResource( 3 )
-position = Vector2( 562.568, 127.938 )
-rotation = 0.00017551
-scale = Vector2( 0.729445, 0.849416 )
-texture = ExtResource( 1 )
-_sections_unfolded = [ "Material", "Visibility" ]
-
-[node name="Light2D" type="Light2D" parent="." index="2"]
+[node name="Light2D" type="Light2D" parent="." index="1"]
 
 position = Vector2( 430, 280 )
 scale = Vector2( 0.687617, 0.789994 )
 enabled = true
 editor_only = false
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -68,52 +61,71 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Shadow" ]
 
-[node name="black" type="Sprite" parent="." index="3"]
+[node name="black" type="Sprite" parent="." index="2"]
 
 position = Vector2( 310, 200 )
 scale = Vector2( 0.0190476, 0.04 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black" index="0"]
 
-occluder = SubResource( 1 )
+occluder = SubResource( 2 )
 light_mask = 1
 
-[node name="black2" type="Sprite" parent="." index="4"]
+[node name="black2" type="Sprite" parent="." index="3"]
 
 position = Vector2( 760, 320 )
 scale = Vector2( 0.0190476, 0.2 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black2" index="0"]
 
-occluder = SubResource( 1 )
+occluder = SubResource( 2 )
 light_mask = 1
 
-[node name="black3" type="Sprite" parent="." index="5"]
+[node name="black3" type="Sprite" parent="." index="4"]
 
 position = Vector2( 535, 150 )
 scale = Vector2( 0.233333, 0.0333333 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black3" index="0"]
 
-occluder = SubResource( 1 )
+occluder = SubResource( 2 )
 light_mask = 1
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Trenchcoat img" type="Sprite" parent="." index="5"]
+
+modulate = Color( 0.441406, 0.379333, 0.379333, 1 )
+position = Vector2( 300.839, 376.427 )
+rotation = 0.00017551
+scale = Vector2( 0.729445, 0.849416 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="white2" type="Sprite" parent="." index="6"]
+
+modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
+material = SubResource( 1 )
+position = Vector2( 562.568, 127.938 )
+rotation = 0.00017551
+scale = Vector2( 0.729445, 0.849416 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Visibility" ]
 
 
