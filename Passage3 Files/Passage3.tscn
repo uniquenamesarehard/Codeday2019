@@ -26,7 +26,7 @@ flatness = 0.0
 gravity = Vector3( 0, 98, 0 )
 initial_velocity = 1.0
 initial_velocity_random = 0.0
-angular_velocity = 1.55678e+017
+angular_velocity = 1.55678e+17
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -496,7 +496,7 @@ flatness = 0.0
 gravity = Vector3( 0, -98, 0 )
 initial_velocity = 1.0
 initial_velocity_random = 0.0
-angular_velocity = 1.4013e-045
+angular_velocity = 1.4013e-45
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -548,6 +548,7 @@ shader_param/OCTAVES = null
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 modulate = Color( 0.328125, 0.328125, 0.328125, 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
@@ -583,6 +584,7 @@ tile_data = PoolIntArray(  )
 
 [node name="Window" type="Sprite" parent="Node2D" index="2"]
 
+editor/display_folded = true
 position = Vector2( 220, 497.625 )
 scale = Vector2( 1.25, 1.22135 )
 texture = ExtResource( 2 )
@@ -1673,13 +1675,13 @@ shape = SubResource( 17 )
 
 [node name="Lighter" parent="." index="5" instance=ExtResource( 9 )]
 
-position = Vector2( 31.273, 542.868 )
+position = Vector2( 34.9485, 541.398 )
 scale = Vector2( 1.09375, 1.09375 )
 
 [node name="white" type="Sprite" parent="." index="6"]
 
 material = SubResource( 18 )
-position = Vector2( 974.015, 166.685 )
+position = Vector2( 520, 300 )
 scale = Vector2( 0.490245, 0.401957 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Material" ]
