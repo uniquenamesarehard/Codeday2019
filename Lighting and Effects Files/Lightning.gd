@@ -22,7 +22,7 @@ func _input(event):
 func _on_Area2D_lightning():
 		energy = 5
 		var t = Timer.new()
-		t.set_wait_time(0.57)
+		t.set_wait_time(1)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()

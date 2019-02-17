@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Art Files/BGPassage3.png" type="Texture" id=1]
 [ext_resource path="res://Art Files/candle.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=10]
 [ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=11]
+[ext_resource path="res://Lighting and Effects Files/Lightning.gd" type="Script" id=12]
+[ext_resource path="res://Area2D.gd" type="Script" id=13]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -30,7 +32,7 @@ flatness = 0.0
 gravity = Vector3( 0, -98, 0 )
 initial_velocity = 1.0
 initial_velocity_random = 0.0
-angular_velocity = 1.4013e-045
+angular_velocity = 1.4013e-45
 angular_velocity_random = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
@@ -77,6 +79,12 @@ render_priority = 0
 shader = ExtResource( 10 )
 shader_param/color = null
 shader_param/OCTAVES = null
+
+[sub_resource type="LineShape2D" id=7]
+
+custom_solver_bias = 0.0
+normal = Vector2( 0, -1 )
+d = 0.0
 
 [node name="Node" type="Node" index="0"]
 
@@ -717,8 +725,7 @@ region_rect = Rect2( 0, 0, 64, 96 )
 editor/display_folded = true
 _sections_unfolded = [ "Visibility" ]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Candle1" type="Light2D" parent="Lighting" index="0"]
@@ -883,7 +890,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="RightWall" type="Sprite" parent="." index="4"]
 
 editor/display_folded = true
-position = Vector2( 440.009, 494.042 )
+position = Vector2( 440, 490 )
 scale = Vector2( 0.00407368, 0.126326 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -912,9 +919,59 @@ scale = Vector2( 1.09375, 1.09375 )
 [node name="white" type="Sprite" parent="." index="6"]
 
 material = SubResource( 6 )
-position = Vector2( 514.581, 296.797 )
+position = Vector2( 520, 300 )
 scale = Vector2( 0.490245, 0.401957 )
 texture = ExtResource( 11 )
 _sections_unfolded = [ "Material" ]
+
+[node name="Lightning" type="Light2D" parent="." index="7"]
+
+position = Vector2( 220, 500 )
+scale = Vector2( 2.4375, 2.4375 )
+enabled = true
+editor_only = false
+texture = ExtResource( 6 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+script = ExtResource( 12 )
+_sections_unfolded = [ "Shadow" ]
+
+[node name="Area2D" type="Area2D" parent="." index="8"]
+
+position = Vector2( 200, 590 )
+scale = Vector2( 0.625, 0.65625 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( -0.708334, -1.5238 )
+scale = Vector2( 0.303803, 4.89834 )
+shape = SubResource( 7 )
 
 
