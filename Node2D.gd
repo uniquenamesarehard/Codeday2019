@@ -24,7 +24,7 @@ func _process(delta):
 	
 	
 func _input(event):
-  print ("Test")
+  
   if(event.is_action("Player_right")):
     if(horizontalMovement >= -MAX_HORIZONTAL_MOVEMENT):
       horizontalMovement+=10
