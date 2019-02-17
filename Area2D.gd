@@ -7,9 +7,9 @@ signal lightning
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	connect("lightning", self, "_yeet")
+	"""connect("lightning", self, "_yeet")
 	var oN = get_node("Lightning")
-	oN.connect("lightning", oN, "_yeet")
+	oN.connect("lightning", oN, "_yeet")"""
 	
 	pass
 
