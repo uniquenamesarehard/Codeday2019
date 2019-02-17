@@ -1,9 +1,219 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://LibraryLighted.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BG.tres" type="TileSet" id=1]
+[ext_resource path="res://TableLampON.png" type="Texture" id=2]
+[ext_resource path="res://OverheadLampOff_OBJ.png" type="Texture" id=3]
+[ext_resource path="res://BookshelfConDesk.png" type="Texture" id=4]
+[ext_resource path="res://Library Chair.png" type="Texture" id=5]
+[ext_resource path="res://BookshelfTile.png" type="Texture" id=6]
+[ext_resource path="res://WallBookCase.png" type="Texture" id=7]
+[ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=8]
+[ext_resource path="res://BGPassage3.png" type="Texture" id=9]
+[ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=10]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=11]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
 
-[node name="TileMap" parent="." index="0" instance=ExtResource( 1 )]
+custom_solver_bias = 0.0
+extents = Vector2( 10, 15.9128 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.6962, 79.1113 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.4534, 79.2206 )
+
+[node name="TileMap" type="TileMap"]
+
+position = Vector2( -410.534, 235.677 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -655336, 0, 0, -589801, 0, 0, -524266, 0, 0, -458731, 0, 0, -393196, 0, 0, -327661, 0, 0, -262126, 0, 0, -196591, 0, 0, -131056, 0, 0, -65521, 0, 0, 15, 0, 0, 65550, 0, 0, 131085, 0, 0, 196620, 0, 0, 262155, 0, 0, 327690, 0, 0, 393225, 0, 0, 393228, 536870916, 0, 393229, 536870916, 0, 393230, 536870916, 0, 393231, 536870916, 0, 393232, 536870916, 0, 393233, 536870916, 0, 393234, 536870916, 0, 393235, 536870916, 0, 393236, 536870916, 0, 393237, 536870916, 0, 393238, 536870916, 0, 393239, 536870916, 0, 393240, 536870916, 0, 393241, 536870916, 0, 393242, 536870916, 0, 393243, 536870916, 0, 393244, 536870916, 0, 393245, 536870916, 0, 393246, 536870916, 0, 393247, 536870916, 0, 393248, 536870916, 0, 393249, 536870916, 0, 458760, 0, 0, 458764, 536870916, 0, 458765, 536870916, 0, 458766, 536870916, 0, 458767, 536870916, 0, 458768, 536870916, 0, 458769, 536870916, 0, 458770, 536870916, 0, 458771, 536870916, 0, 458772, 536870916, 0, 458773, 536870916, 0, 458774, 536870916, 0, 458775, 536870916, 0, 458776, 536870916, 0, 458777, 536870916, 0, 458778, 536870916, 0, 458779, 536870916, 0, 458780, 536870916, 0, 458781, 536870916, 0, 458782, 536870916, 0, 458783, 536870916, 0, 458784, 536870916, 0, 458785, 536870916, 0, 524295, 0, 0, 524300, 536870918, 0, 524301, 536870918, 0, 524302, 536870918, 0, 524303, 536870918, 0, 524304, 536870918, 0, 524305, 536870918, 0, 524306, 536870918, 0, 524307, 536870918, 0, 524308, 536870918, 0, 524309, 536870918, 0, 524310, 536870918, 0, 524311, 536870918, 0, 524312, 536870918, 0, 524313, 536870918, 0, 524314, 536870918, 0, 524315, 536870918, 0, 524316, 536870918, 0, 524317, 536870918, 0, 524318, 536870918, 0, 524319, 536870918, 0, 524320, 536870918, 0, 524321, 536870918, 0, 589836, 536870923, 0, 589837, 536870923, 0, 589838, 536870923, 0, 589839, 536870923, 0, 589840, 536870923, 0, 589841, 536870923, 0, 589842, 536870923, 0, 589843, 536870923, 0, 589844, 536870923, 0, 589845, 536870923, 0, 589846, 536870923, 0, 589847, 536870923, 0, 589848, 536870923, 0, 589849, 536870923, 0, 589850, 536870923, 0, 589851, 536870923, 0, 589852, 536870923, 0, 589853, 536870923, 0, 589854, 536870923, 0, 589855, 536870923, 0, 589856, 536870923, 0, 589857, 536870923, 0, 655372, 536870923, 0, 655373, 536870923, 0, 655374, 536870923, 0, 655375, 536870923, 0, 655376, 536870923, 0, 655377, 536870923, 0, 655378, 536870923, 0, 655379, 536870923, 0, 655380, 536870923, 0, 655381, 536870923, 0, 655382, 536870923, 0, 655383, 536870923, 0, 655384, 536870923, 0, 655385, 536870923, 0, 655386, 536870923, 0, 655387, 536870923, 0, 655388, 536870923, 0, 655389, 536870923, 0, 655390, 536870923, 0, 655391, 536870923, 0, 655392, 536870923, 0, 655393, 536870923, 0, 720908, 536870923, 0, 720909, 536870923, 0, 720910, 536870923, 0, 720911, 536870923, 0, 720912, 536870923, 0, 720913, 536870923, 0, 720914, 536870923, 0, 720915, 536870923, 0, 720916, 536870923, 0, 720917, 536870923, 0, 720918, 536870923, 0, 720919, 536870923, 0, 720920, 536870923, 0, 720921, 536870923, 0, 720922, 536870923, 0, 720923, 536870923, 0, 720924, 536870923, 0, 720925, 536870923, 0, 720926, 536870923, 0, 720927, 536870923, 0, 720928, 536870923, 0, 720929, 536870923, 0, 983055, 536870923, 0 )
+
+[node name="Node2D" type="Node2D" parent="." index="0"]
+
+position = Vector2( 412.527, -219.759 )
+
+[node name="Sprite" type="Sprite" parent="Node2D" index="0"]
+
+position = Vector2( 20, 510 )
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 32, 38 )
+
+[node name="overheadlight1" type="Sprite" parent="Node2D" index="1"]
+
+position = Vector2( 190, 432 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="BookshelfConDesk" type="Sprite" parent="Node2D" index="2"]
+
+modulate = Color( 0.492188, 0.465271, 0.465271, 1 )
+position = Vector2( -10, 410 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 160 )
+_sections_unfolded = [ "Material", "Region", "Visibility" ]
+
+[node name="chair" type="Sprite" parent="Node2D" index="3"]
+
+position = Vector2( 80, 540 )
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="bookshelf1" type="Sprite" parent="Node2D" index="4"]
+
+modulate = Color( 0.492196, 0.465255, 0.465255, 1 )
+position = Vector2( 130, 490 )
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 64, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="bookshelf2" type="Sprite" parent="Node2D" index="5"]
+
+modulate = Color( 0.492196, 0.465255, 0.465255, 1 )
+position = Vector2( 242, 490 )
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 64, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="bookshelf3" type="Sprite" parent="Node2D" index="6"]
+
+modulate = Color( 0.65625, 0.563965, 0.563965, 1 )
+position = Vector2( 290, 416 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 160 )
+_sections_unfolded = [ "Offset", "Region", "Visibility" ]
+
+[node name="bookshelf4" type="Sprite" parent="Node2D" index="7"]
+
+modulate = Color( 0.656235, 0.562, 0.562, 1 )
+position = Vector2( 530, 496 )
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 160, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="overheadlight2" type="Sprite" parent="Node2D" index="8"]
+
+position = Vector2( 340, 432 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="overheadlight3" type="Sprite" parent="Node2D" index="9"]
+
+position = Vector2( 495, 432 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="bookshelf5secretdoor" type="Sprite" parent="Node2D" index="10"]
+
+modulate = Color( 0.656235, 0.433044, 0.433044, 1 )
+position = Vector2( 640, 496 )
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 160, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Floor" type="Sprite" parent="Node2D" index="11"]
+
+position = Vector2( 335.319, 576.371 )
+rotation = 1.5708
+scale = Vector2( 0.521096, -21.1311 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Floor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Floor/StaticBody2D" index="0"]
+
+position = Vector2( 7.06989, 0 )
+scale = Vector2( 0.456163, 1 )
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Sprite" parent="Node2D" index="12"]
+
+position = Vector2( -2.85251, 486.309 )
+scale = Vector2( 1, 1.07048 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/LeftWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LeftWall/StaticBody2D" index="0"]
+
+position = Vector2( 10.7027, 5.89322 )
+scale = Vector2( 0.599094, 0.928229 )
+shape = SubResource( 2 )
+
+[node name="RightWall" type="Sprite" parent="Node2D" index="13"]
+
+position = Vector2( 670.414, 488.573 )
+scale = Vector2( 0.306437, 1.0407 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/RightWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/RightWall/StaticBody2D" index="0"]
+
+position = Vector2( 0, 5.00613 )
+scale = Vector2( 1, 0.939113 )
+shape = SubResource( 3 )
+
+[node name="Lighter" parent="." index="1" instance=ExtResource( 11 )]
+
+position = Vector2( 462.682, 306.332 )
 
 
