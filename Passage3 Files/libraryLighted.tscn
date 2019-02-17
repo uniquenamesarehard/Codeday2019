@@ -191,7 +191,7 @@ shape = SubResource( 2 )
 
 [node name="Lighter" parent="Node2D/LeftWall" index="1" instance=ExtResource( 11 )]
 
-position = Vector2( 48.015, 36.7007 )
+position = Vector2( 35.4909, 36.7007 )
 
 [node name="RightWall" type="Sprite" parent="." index="1"]
 
