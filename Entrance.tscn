@@ -27,6 +27,7 @@ extents = Vector2( 38.4006, 15.9676 )
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
+position = Vector2( -3.521, -1.7605 )
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -171,6 +172,6 @@ shape = SubResource( 3 )
 
 [node name="Lighter" parent="." index="10" instance=ExtResource( 7 )]
 
-position = Vector2( 147.431, 359.571 )
+position = Vector2( 153.593, 361.331 )
 
 
