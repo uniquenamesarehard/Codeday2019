@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-3e0ac45c6fffa062d5bb4d5f0e566b18.stex"
+path="res://.import/icon.png-ec0ca7b0ecb7d5c0ece297095842822e.stex"
 
 [deps]
 
-source_file="res://Whacky Files/icon.png"
-dest_files=[ "res://.import/icon.png-3e0ac45c6fffa062d5bb4d5f0e566b18.stex" ]
+source_file="res://Passage3 Files/icon.png"
+dest_files=[ "res://.import/icon.png-ec0ca7b0ecb7d5c0ece297095842822e.stex" ]
 
 [params]
 
