@@ -19,6 +19,8 @@
 
 
 
+
+
 [sub_resource type="OccluderPolygon2D" id=1]
 
 closed = true
