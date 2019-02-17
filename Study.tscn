@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://BGStudyWood.png" type="Texture" id=9]
 [ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=10]
 [ext_resource path="res://BGPassage1.png" type="Texture" id=11]
+[ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=12]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -32,7 +34,15 @@ extents = Vector2( 34.019, 16.3412 )
 custom_solver_bias = 0.0
 extents = Vector2( 28.085, 16 )
 
+[sub_resource type="OccluderPolygon2D" id=5]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( 0, 56.6667, 0, 226.667, 56.6667, 226.667, 56.6667, 198.333, 56.6667, 28.3334 )
+
 [node name="Node2D" type="Node2D" index="0"]
+
+position = Vector2( 10, 60 )
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -124,6 +134,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Floor" type="Sprite" parent="." index="8"]
 
+editor/display_folded = true
 position = Vector2( 175.888, 545.9 )
 rotation = 1.5708
 scale = Vector2( 0.114805, 11.0066 )
@@ -149,6 +160,7 @@ shape = SubResource( 1 )
 
 [node name="LeftWall" type="Sprite" parent="." index="9"]
 
+editor/display_folded = true
 position = Vector2( -0.70166, 459.958 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -171,6 +183,7 @@ shape = SubResource( 2 )
 
 [node name="RightWall1" type="Sprite" parent="." index="10"]
 
+editor/display_folded = true
 position = Vector2( 352.417, 424.448 )
 scale = Vector2( 0.142942, 2.52194 )
 texture = ExtResource( 10 )
@@ -194,6 +207,7 @@ shape = SubResource( 3 )
 
 [node name="RightWall2" type="Sprite" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( 352.136, 504.38 )
 scale = Vector2( 0.17275, 2.53051 )
 texture = ExtResource( 11 )
@@ -214,5 +228,66 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall2/StaticBody2D" index="0"]
 
 shape = SubResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="." index="12"]
+
+position = Vector2( 140, 400 )
+scale = Vector2( 3.125, 3.125 )
+enabled = true
+editor_only = false
+texture = ExtResource( 12 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
+[node name="Light2D2" type="Light2D" parent="." index="13"]
+
+position = Vector2( 240, 460 )
+scale = Vector2( 0.470588, 0.470588 )
+enabled = true
+editor_only = false
+texture = ExtResource( 13 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+_sections_unfolded = [ "Shadow" ]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="14"]
+
+position = Vector2( 240, 470 )
+scale = Vector2( 0.352941, 0.352941 )
+occluder = SubResource( 5 )
+light_mask = 1
 
 
