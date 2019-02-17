@@ -1,0 +1,224 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://BG.tres" type="TileSet" id=1]
+[ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
+[ext_resource path="res://WallBookCase.png" type="Texture" id=3]
+[ext_resource path="res://DeskStudy.png" type="Texture" id=4]
+[ext_resource path="res://Door.png" type="Texture" id=5]
+[ext_resource path="res://Study Chair.png" type="Texture" id=6]
+[ext_resource path="res://OverheadLampOff_OBJ.png" type="Texture" id=7]
+[ext_resource path="res://TableLampON.png" type="Texture" id=8]
+[ext_resource path="res://BGStudyWood.png" type="Texture" id=9]
+[ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=10]
+[ext_resource path="res://BGPassage1.png" type="Texture" id=11]
+[ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.9971, 15.907 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.55823, 83.7606 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 34.019, 16.3412 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 28.085, 16 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( 157.058, -81.5655 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 983035, 10, 0, 983036, 10, 0, 983037, 10, 0, 983038, 10, 0, 983039, 10, 0, 917504, 10, 0, 917505, 10, 0, 917506, 10, 0, 917507, 10, 0, 917508, 10, 0, 917509, 10, 0, 1048571, 10, 0, 1048572, 10, 0, 1048573, 10, 0, 1048574, 10, 0, 1048575, 10, 0, 983040, 10, 0, 983041, 10, 0, 983042, 10, 0, 983043, 10, 0, 983045, 10, 0, 1114107, 10, 0, 1114108, 10, 0, 1114109, 9, 0, 1114110, 10, 0, 1114111, 10, 0, 1048576, 10, 0, 1048577, 10, 0, 1048578, 11, 0, 1048579, 10, 0, 1048580, 10, 0, 1048581, 10, 0, 1179643, 9, 0, 1179644, 9, 0, 1179645, 11, 0, 1179646, 9, 0, 1179647, 9, 0, 1114112, 9, 0, 1114113, 9, 0, 1114114, 9, 0, 1114115, 9, 0, 1114116, 9, 0, 1114117, 9, 0, 1245179, 11, 0, 1245180, 11, 0, 1245181, 11, 0, 1245182, 11, 0, 1245183, 11, 0, 1179648, 11, 0, 1179649, 11, 0, 1179651, 11, 0, 1179652, 11, 0, 1179653, 11, 0, 1310715, 11, 0, 1310716, 11, 0, 1310717, 11, 0, 1310718, 11, 0, 1310719, 11, 0, 1245184, 11, 0, 1245185, 11, 0, 1245186, 11, 0, 1245187, 11, 0, 1245188, 11, 0, 1245189, 11, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="SecretDoor Bookshelf" type="Sprite" parent="." index="1"]
+
+position = Vector2( -33, 380 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 160 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Bookshelf" type="Sprite" parent="." index="2"]
+
+modulate = Color( 0.921875, 0.878662, 0.878662, 1 )
+position = Vector2( 207, 385 )
+scale = Vector2( 0.8625, 0.90625 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Desk" type="Sprite" parent="." index="3"]
+
+modulate = Color( 0.597656, 0.515945, 0.515945, 1 )
+position = Vector2( 160, 470 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 100, 64 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="Door" type="Sprite" parent="." index="4"]
+
+position = Vector2( 50, 410 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 128 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chair" type="Sprite" parent="." index="5"]
+
+modulate = Color( 0.929688, 0.755371, 0.755371, 1 )
+position = Vector2( 188, 473 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="lamps" type="Sprite" parent="." index="6"]
+
+position = Vector2( 121, 385 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="lamps2" type="Sprite" parent="." index="7"]
+
+position = Vector2( 223, 445 )
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 38 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Floor" type="Sprite" parent="." index="8"]
+
+position = Vector2( 175.888, 552.256 )
+rotation = 1.5708
+scale = Vector2( 0.114805, 11.0066 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Sprite" parent="." index="9"]
+
+position = Vector2( -0.70166, 459.958 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="RightWall1" type="Sprite" parent="." index="10"]
+
+position = Vector2( 352.417, 424.448 )
+scale = Vector2( 0.142942, 2.52194 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall1/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="RightWall2" type="Sprite" parent="." index="11"]
+
+position = Vector2( 352.136, 504.38 )
+scale = Vector2( 0.17275, 2.53051 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall2/StaticBody2D" index="0"]
+
+shape = SubResource( 4 )
+
+[node name="Lighter" parent="." index="12" instance=ExtResource( 12 )]
+
+position = Vector2( 30.6479, 497.771 )
+
+
