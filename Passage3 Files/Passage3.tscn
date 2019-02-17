@@ -1699,7 +1699,7 @@ _sections_unfolded = [ "Material" ]
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 
-position = Vector2( 220, 500 )
+position = Vector2( 217.784, 500 )
 scale = Vector2( 3.42578, 3.42578 )
 enabled = true
 editor_only = false
