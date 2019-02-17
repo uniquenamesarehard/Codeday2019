@@ -3,28 +3,29 @@
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
 [ext_resource path="res://WallBookCase.png" type="Texture" id=3]
-[ext_resource path="res://DeskStudy.png" type="Texture" id=4]
-[ext_resource path="res://Lighting and Effects Files/black.png" type="Texture" id=5]
-[ext_resource path="res://Door.png" type="Texture" id=6]
-[ext_resource path="res://Study Chair.png" type="Texture" id=7]
-[ext_resource path="res://OverheadLampOff_OBJ.png" type="Texture" id=8]
-[ext_resource path="res://TableLampON.png" type="Texture" id=9]
-[ext_resource path="res://BGStudyWood.png" type="Texture" id=10]
-[ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=11]
-[ext_resource path="res://BGPassage1.png" type="Texture" id=12]
-[ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=13]
-[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=14]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Key2.gd" type="Script" id=4]
+[ext_resource path="res://Power Room Key.png" type="Texture" id=5]
+[ext_resource path="res://Lighting and Effects Files/black.png" type="Texture" id=6]
+[ext_resource path="res://DeskStudy.png" type="Texture" id=7]
+[ext_resource path="res://Door.png" type="Texture" id=8]
+[ext_resource path="res://Study Chair.png" type="Texture" id=9]
+[ext_resource path="res://OverheadLampOff_OBJ.png" type="Texture" id=10]
+[ext_resource path="res://TableLampON.png" type="Texture" id=11]
+[ext_resource path="res://BGStudyWood.png" type="Texture" id=12]
+[ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=13]
+[ext_resource path="res://BGPassage1.png" type="Texture" id=14]
+[ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=15]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 11.349, 12.41 )
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10.9971, 15.907 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 8.55823, 83.7606 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -36,15 +37,9 @@ extents = Vector2( 34.019, 16.3412 )
 custom_solver_bias = 0.0
 extents = Vector2( 28.085, 16 )
 
-[sub_resource type="OccluderPolygon2D" id=5]
+[node name="Node2D" type="Node2D" index="0"]
 
-closed = true
-cull_mode = 0
-polygon = PoolVector2Array( 47.8036, 48.2009, 47.8036, 207.363, 56.6667, 226.667, 56.6667, 198.333, 56.6667, 28.3334 )
-
-[node name="Node2D" type="Node2D"]
-
-position = Vector2( 10, 60 )
+position = Vector2( 0, 60 )
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -90,66 +85,91 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 160, 160 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Desk" type="Sprite" parent="." index="3"]
+[node name="Area2D" type="Area2D" parent="." index="3"]
 
-modulate = Color( 0.597656, 0.515945, 0.515945, 1 )
-position = Vector2( 160, 476.055 )
-texture = ExtResource( 4 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 100, 64 )
-_sections_unfolded = [ "Region", "Visibility" ]
+position = Vector2( 250, 480 )
+scale = Vector2( 0.5699, 0.5699 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="Power Room Key" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 3.52814, 8.13849 )
+scale = Vector2( 3.07071, 3.07071 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="1"]
+
+position = Vector2( 0.666901, 7.33606 )
+scale = Vector2( 1.84976, 1.84976 )
+shape = SubResource( 5 )
 
 [node name="black" type="Sprite" parent="." index="4"]
 
 position = Vector2( 82.1357, 483.573 )
 scale = Vector2( 0.0306322, 0.0729562 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
-[node name="Door" type="Sprite" parent="." index="5"]
+[node name="Desk" type="Sprite" parent="." index="5"]
+
+modulate = Color( 0.597656, 0.515945, 0.515945, 1 )
+position = Vector2( 160, 476.055 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 100, 64 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="Door" type="Sprite" parent="." index="6"]
 
 position = Vector2( 50, 410 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 64, 128 )
 _sections_unfolded = [ "Region" ]
 
-[node name="chair" type="Sprite" parent="." index="6"]
+[node name="chair" type="Sprite" parent="." index="7"]
 
 modulate = Color( 0.929688, 0.755371, 0.755371, 1 )
 position = Vector2( 190, 480 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 64 )
 _sections_unfolded = [ "Region", "Visibility" ]
 
-[node name="lamps" type="Sprite" parent="." index="7"]
+[node name="lamps" type="Sprite" parent="." index="8"]
 
 position = Vector2( 121, 385 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Region" ]
 
-[node name="lamps2" type="Sprite" parent="." index="8"]
+[node name="lamps2" type="Sprite" parent="." index="9"]
 
-position = Vector2( 223, 450.424 )
-texture = ExtResource( 9 )
+position = Vector2( 220, 450 )
+texture = ExtResource( 11 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 38 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Floor" type="Sprite" parent="." index="9"]
+[node name="Floor" type="Sprite" parent="." index="10"]
 
 editor/display_folded = true
 position = Vector2( 175.888, 545.9 )
 rotation = 1.5708
 scale = Vector2( 0.114805, 11.0066 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -169,35 +189,12 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LeftWall" type="Sprite" parent="." index="10"]
-
-editor/display_folded = true
-position = Vector2( -0.70166, 459.958 )
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
-
 [node name="RightWall1" type="Sprite" parent="." index="11"]
 
 editor/display_folded = true
 position = Vector2( 352.417, 424.448 )
 scale = Vector2( 0.142942, 2.52194 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -221,7 +218,7 @@ shape = SubResource( 3 )
 editor/display_folded = true
 position = Vector2( 352.136, 504.38 )
 scale = Vector2( 0.17275, 2.53051 )
-texture = ExtResource( 12 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -246,7 +243,7 @@ position = Vector2( 140, 400 )
 scale = Vector2( 3.125, 3.125 )
 enabled = true
 editor_only = false
-texture = ExtResource( 13 )
+texture = ExtResource( 15 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -273,7 +270,7 @@ position = Vector2( 239.327, 461.009 )
 scale = Vector2( 0.470588, 0.470588 )
 enabled = true
 editor_only = false
-texture = ExtResource( 14 )
+texture = ExtResource( 16 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -294,16 +291,6 @@ shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Shadow" ]
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="." index="15"]
-
-position = Vector2( 240, 480 )
-scale = Vector2( 0.352941, 0.352941 )
-occluder = SubResource( 5 )
-light_mask = 1
-
-[node name="Lighter" parent="." index="16" instance=ExtResource( 15 )]
-
-position = Vector2( 35.4144, 491.415 )
-speed = 85
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 
 

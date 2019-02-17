@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BGPassage3.png" type="Texture" id=2]
@@ -8,18 +8,33 @@
 [ext_resource path="res://Library Chair.png" type="Texture" id=6]
 [ext_resource path="res://BookshelfTile.png" type="Texture" id=7]
 [ext_resource path="res://WallBookCase.png" type="Texture" id=8]
-[ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=9]
-[ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=10]
-[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=11]
-[ext_resource path="res://Study Key.png" type="Texture" id=12]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Key.gd" type="Script" id=9]
+[ext_resource path="res://Study Key.png" type="Texture" id=10]
+[ext_resource path="res://Study Key.gd" type="Script" id=11]
+[ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=12]
+[ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=13]
+[ext_resource path="res://Portal.gd" type="Script" id=14]
+[ext_resource path="res://Position2D.gd" type="Script" id=15]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=16]
+[ext_resource path="res://RightWall.gd" type="Script" id=17]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 1.53345, 16.0356 )
 
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
 [sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
@@ -157,11 +172,38 @@ position = Vector2( 495, 432 )
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 32, 32 )
 
-[node name="bookshelf5secretdoor" type="Sprite" parent="Node2D" index="11"]
+[node name="Area2D" type="Area2D" parent="Node2D" index="11"]
+
+position = Vector2( 60, 520 )
+scale = Vector2( 1.75, 1.75 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D" index="0"]
+
+position = Vector2( -11.4286, 0 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Study Key" type="Sprite" parent="Node2D/Area2D" index="1"]
+
+scale = Vector2( 1, 1 )
+texture = ExtResource( 10 )
+offset = Vector2( -11.4286, 0 )
+script = ExtResource( 11 )
+
+[node name="bookshelf5secretdoor" type="Sprite" parent="Node2D/Area2D/Study Key" index="0"]
 
 modulate = Color( 0.656235, 0.433044, 0.433044, 1 )
-position = Vector2( 640, 496 )
-texture = ExtResource( 9 )
+position = Vector2( 331.429, -13.7143 )
+scale = Vector2( 0.571429, 0.571429 )
+texture = ExtResource( 12 )
 region_rect = Rect2( 0, 0, 160, 160 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -169,7 +211,7 @@ _sections_unfolded = [ "Visibility" ]
 
 position = Vector2( 1.16315, 489.74 )
 scale = Vector2( 0.68863, 1 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -188,13 +230,46 @@ bounce = 0.0
 
 scale = Vector2( 1, 8.0357 )
 shape = SubResource( 2 )
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="Node2D/LeftWall/StaticBody2D" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+
+[node name="Position2D" type="Position2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="0"]
+
+position = Vector2( -1.68908, -129.74 )
+scale = Vector2( 1.45216, 1 )
+script = ExtResource( 15 )
+
+[node name="Position2D2" type="Position2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="1"]
+
+position = Vector2( -1.68908, 20.26 )
+scale = Vector2( 1.45216, 1 )
+
+[node name="Lighter" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="2" instance=ExtResource( 16 )]
+
+position = Vector2( 404.915, 40.26 )
+scale = Vector2( 1.45216, 1 )
+speed = 85
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="3"]
+
+shape = SubResource( 5 )
 
 [node name="RightWall" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 663.189, 487.183 )
 scale = Vector2( 0.636379, 1.02598 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
+script = ExtResource( 17 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -219,7 +294,7 @@ position = Vector2( 340, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 11 )
+texture = ExtResource( 18 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -245,7 +320,7 @@ position = Vector2( 190, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 11 )
+texture = ExtResource( 18 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -271,7 +346,7 @@ position = Vector2( 500, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 11 )
+texture = ExtResource( 18 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -297,7 +372,7 @@ position = Vector2( 20, 510 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 11 )
+texture = ExtResource( 18 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -317,15 +392,14 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
-[node name="Study Key" type="Sprite" parent="." index="6"]
+[connection signal="body_entered" from="Node2D/Area2D" to="Node2D/Area2D" method="_on_Area2D_body_entered"]
 
-position = Vector2( 71, 489 )
-scale = Vector2( 4.875, 4.875 )
-texture = ExtResource( 12 )
+[connection signal="x" from="Node2D/Area2D" to="RightWall" method="x"]
 
-[node name="Lighter" parent="." index="7" instance=ExtResource( 13 )]
+[connection signal="body_entered" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D" method="_on_Area2D_body_entered"]
 
-visible = false
-position = Vector2( 40, 530 )
+[connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Lighter" method="p"]
+
+[connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Position2D" method="p"]
 
 

@@ -38,3 +38,9 @@ func _physics_process(delta):
 
 	move_and_slide(motion)
 
+
+
+
+func p():
+	position = Vector2($Position2D)
+	pass # replace with function body
