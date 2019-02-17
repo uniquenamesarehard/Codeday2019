@@ -1,5 +1,5 @@
 extends CanvasLayer
-signal new_text
+#signal new_text
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -13,12 +13,12 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
-#func _process(delta):
+func _process(delta):
 #	pass
-	#if Input.is_action_pressed("ui_select"): #and object is interactable
+	if Input.is_action_pressed("ui_select"): #and object is interactable
 		#$ExamineText.text = text
-	#	$Panel/ExamineText.text = "Today is February 16, 2019. This is the day we build a game"
-	#	$Panel.show()
+		$Panel/ExamineText.text = "Today is February 16, 2019. This is the day we build a game"
+		$Panel.show()
 	#if Input.is_action_pressed("ui_accept"):
 	#	end = true
 	#if(end == true):

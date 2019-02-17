@@ -6,6 +6,7 @@
 [ext_resource path="res://Iris' Stuff/ExamineText.gd" type="Script" id=4]
 [ext_resource path="res://Iris' Stuff/assets/Blueprint.jpg" type="Texture" id=5]
 
+
 [sub_resource type="DynamicFont" id=1]
 
 size = 20
@@ -73,18 +74,18 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = ""
+text = "Hi"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
 script = ExtResource( 4 )
-_sections_unfolded = [ "BBCode", "Visibility", "custom_fonts" ]
+_sections_unfolded = [ "BBCode", "Rect", "Visibility", "custom_fonts" ]
 
 [node name="TextTimer" type="Timer" parent="Panel" index="1"]
 
 process_mode = 1
-wait_time = 0.1
+wait_time = 0.5
 one_shot = false
 autostart = true
 
@@ -162,10 +163,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 446.0
-margin_top = 458.0
-margin_right = 624.0
-margin_bottom = 503.0
+margin_left = 445.846
+margin_top = 457.875
+margin_right = 623.846
+margin_bottom = 502.875
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
