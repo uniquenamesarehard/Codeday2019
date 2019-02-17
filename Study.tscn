@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://BG.tres" type="TileSet" id=1]
+[ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
+[ext_resource path="res://WallBookCase.png" type="Texture" id=3]
+[ext_resource path="res://DeskStudy.png" type="Texture" id=4]
+[ext_resource path="res://Door.png" type="Texture" id=5]
+[ext_resource path="res://Study Chair.png" type="Texture" id=6]
+[ext_resource path="res://OverheadLampOff_OBJ.png" type="Texture" id=7]
+[ext_resource path="res://TableLampON.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 786432, 10, 0, 786433, 10, 0, 786434, 10, 0, 786435, 10, 0, 786436, 10, 0, 786437, 10, 0, 786438, 10, 0, 786439, 10, 0, 786440, 10, 0, 786441, 10, 0, 786442, 10, 0, 851968, 10, 0, 851969, 10, 0, 851970, 10, 0, 851971, 10, 0, 851972, 10, 0, 851973, 10, 0, 851974, 10, 0, 851975, 10, 0, 851976, 10, 0, 851977, 10, 0, 851978, 10, 0, 917504, 9, 0, 917505, 9, 0, 917506, 9, 0, 917507, 9, 0, 917508, 9, 0, 917509, 9, 0, 917510, 9, 0, 917511, 9, 0, 917512, 9, 0, 917513, 9, 0, 917514, 9, 0, 983040, 11, 0, 983041, 11, 0, 983042, 11, 0, 983043, 11, 0, 983044, 11, 0, 983045, 11, 0, 983046, 11, 0, 983047, 11, 0, 983048, 11, 0, 983049, 11, 0, 983050, 11, 0, 1048576, 11, 0, 1048577, 11, 0, 1048578, 11, 0, 1048579, 11, 0, 1048580, 11, 0, 1048581, 11, 0, 1048582, 11, 0, 1048583, 11, 0, 1048584, 11, 0, 1048585, 11, 0, 1048586, 11, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="SecretDoor Bookshelf" type="Sprite" parent="." index="1"]
+
+position = Vector2( -33, 380 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 160 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Bookshelf" type="Sprite" parent="." index="2"]
+
+modulate = Color( 0.921875, 0.878662, 0.878662, 1 )
+position = Vector2( 207, 385 )
+scale = Vector2( 0.8625, 0.90625 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 160 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Desk" type="Sprite" parent="." index="3"]
+
+modulate = Color( 0.597656, 0.515945, 0.515945, 1 )
+position = Vector2( 160, 470 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 100, 64 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="Door" type="Sprite" parent="." index="4"]
+
+position = Vector2( 50, 410 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 128 )
+_sections_unfolded = [ "Region" ]
+
+[node name="chair" type="Sprite" parent="." index="5"]
+
+modulate = Color( 0.929688, 0.755371, 0.755371, 1 )
+position = Vector2( 188, 473 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region", "Visibility" ]
+
+[node name="lamps" type="Sprite" parent="." index="6"]
+
+position = Vector2( 121, 385 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="lamps2" type="Sprite" parent="." index="7"]
+
+position = Vector2( 223, 445 )
+texture = ExtResource( 8 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 38 )
+_sections_unfolded = [ "Region" ]
+
+
