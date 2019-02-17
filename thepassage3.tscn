@@ -1,26 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://Windowlit.png" type="Texture" id=2]
 [ext_resource path="res://candle.png" type="Texture" id=3]
-[ext_resource path="res://BGLibrary.png" type="Texture" id=4]
-[ext_resource path="res://BGPassage3.png" type="Texture" id=5]
-[ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=6]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 2.42371, 16.007 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 49.0993, 15.5709 )
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 62.5342, 16.0347 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -70,80 +52,5 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 8, 6, 16, 25 )
 _sections_unfolded = [ "Region" ]
-
-[node name="Floor" type="Sprite" parent="." index="4"]
-
-position = Vector2( 160.669, 582.545 )
-rotation = 1.5708
-scale = Vector2( 0.458912, 10.0175 )
-texture = ExtResource( 4 )
-_sections_unfolded = [ "Transform" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="LeftWall" type="Sprite" parent="." index="5"]
-
-position = Vector2( 0.29129, 496.565 )
-scale = Vector2( 0.184637, 5.07274 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
-
-[node name="RightWall" type="Sprite" parent="." index="6"]
-
-position = Vector2( 321.331, 497.328 )
-scale = Vector2( 0.129148, 4.98493 )
-texture = ExtResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="RightWall" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
-
-shape = SubResource( 3 )
-
-[node name="Lighter" parent="." index="7" instance=ExtResource( 6 )]
-
-position = Vector2( 29.592, 531.836 )
 
 
