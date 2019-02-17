@@ -10,10 +10,6 @@
 [ext_resource path="res://SpriteAssets/Trenchcoat img.png" type="Texture" id=8]
 [ext_resource path="res://BuildingAssets/BGEntranceWallPaper.png" type="Texture" id=9]
 
-
-
-
-
 [node name="Codeday" type="Node2D"]
 
 __meta__ = {
