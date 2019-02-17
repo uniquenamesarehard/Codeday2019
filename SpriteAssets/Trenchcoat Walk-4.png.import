@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Trenchcoat Walk-2.png-29c0c8a7dc1d61d45cbd35065426b369.stex"
+path="res://.import/Trenchcoat Walk-4.png-f8ebbed85c9d32c53db2ba19782b69d1.stex"
 
 [deps]
 
-source_file="res://Trenchcoat Walk-2.png"
-dest_files=[ "res://.import/Trenchcoat Walk-2.png-29c0c8a7dc1d61d45cbd35065426b369.stex" ]
+source_file="res://SpriteAssets/Trenchcoat Walk-4.png"
+dest_files=[ "res://.import/Trenchcoat Walk-4.png-f8ebbed85c9d32c53db2ba19782b69d1.stex" ]
 
 [params]
 

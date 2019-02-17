@@ -7,8 +7,9 @@
 [ext_resource path="res://Lightning.gd" type="Script" id=5]
 [ext_resource path="res://black.png" type="Texture" id=6]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=7]
-[ext_resource path="res://Trenchcoat img.png" type="Texture" id=8]
+[ext_resource path="res://SpriteAssets/Trenchcoat img.png" type="Texture" id=8]
 [ext_resource path="res://BuildingAssets/BGEntranceWallPaper.png" type="Texture" id=9]
+
 
 
 

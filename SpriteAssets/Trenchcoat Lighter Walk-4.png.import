@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Trenchcoat Lighter Walk-1.png-23b9401c5395043ee28d3cdd0128cdda.stex"
+path="res://.import/Trenchcoat Lighter Walk-4.png-1ed97a439691b3ea858d3051b79ba60d.stex"
 
 [deps]
 
-source_file="res://Trenchcoat Lighter Walk-1.png"
-dest_files=[ "res://.import/Trenchcoat Lighter Walk-1.png-23b9401c5395043ee28d3cdd0128cdda.stex" ]
+source_file="res://SpriteAssets/Trenchcoat Lighter Walk-4.png"
+dest_files=[ "res://.import/Trenchcoat Lighter Walk-4.png-1ed97a439691b3ea858d3051b79ba60d.stex" ]
 
 [params]
 

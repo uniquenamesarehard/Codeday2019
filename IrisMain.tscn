@@ -2,7 +2,8 @@
 
 [ext_resource path="res://IrisMain.gd" type="Script" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Trenchcoat Walk-1.png" type="Texture" id=3]
+[ext_resource path="res://SpriteAssets/Trenchcoat Walk-1.png" type="Texture" id=3]
+
 
 [node name="IrisMain" type="Node"]
 
