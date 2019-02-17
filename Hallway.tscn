@@ -82,17 +82,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite26" type="Sprite" parent="Node2D" index="0"]
-
-position = Vector2( 99.8857, 125.061 )
-scale = Vector2( 1.25, 1.25 )
-texture = ExtResource( 1 )
-centered = false
-region_enabled = true
-region_rect = Rect2( 0, 0, 32, 32 )
-_sections_unfolded = [ "Offset", "Region" ]
-
-[node name="TileMap" type="TileMap" parent="Node2D" index="1"]
+[node name="TileMap" type="TileMap" parent="Node2D" index="0"]
 
 position = Vector2( -20.1143, -434.939 )
 mode = 0
@@ -113,7 +103,7 @@ occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray(  )
 
-[node name="Sprite" type="Sprite" parent="Node2D" index="2"]
+[node name="Sprite" type="Sprite" parent="Node2D" index="1"]
 
 position = Vector2( -20.1143, 125.061 )
 scale = Vector2( 1.25, 1.25 )
@@ -123,9 +113,19 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite18" type="Sprite" parent="Node2D" index="3"]
+[node name="Sprite18" type="Sprite" parent="Node2D" index="2"]
 
 position = Vector2( 19.8857, 125.061 )
+scale = Vector2( 1.25, 1.25 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Sprite26" type="Sprite" parent="Node2D" index="3"]
+
+position = Vector2( 99.8857, 125.061 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 1 )
 centered = false

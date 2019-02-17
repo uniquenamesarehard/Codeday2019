@@ -55,8 +55,6 @@ _sections_unfolded = [ "Emission Shape", "Gravity", "Spread" ]
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
-
 [node name="Sprite26" type="Sprite" parent="Node2D" index="0"]
 
 position = Vector2( 120, 560 )
