@@ -10,7 +10,7 @@
 [ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=8]
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=9]
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="TileMap" type="TileMap"]
 
 position = Vector2( 0, 30 )
 mode = 0

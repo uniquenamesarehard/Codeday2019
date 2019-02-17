@@ -8,7 +8,7 @@
 [ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=6]
 [ext_resource path="res://Art Files/BGStudyWallpaper.png" type="Texture" id=7]
 [ext_resource path="res://Lighting and Effects Files/black.png" type="Texture" id=8]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=10]
 [ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=11]
 
@@ -544,7 +544,7 @@ shader = ExtResource( 10 )
 shader_param/color = null
 shader_param/OCTAVES = null
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
