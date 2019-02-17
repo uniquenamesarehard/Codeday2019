@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BGPassage3.png" type="Texture" id=2]
@@ -14,10 +14,9 @@
 [ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=12]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=13]
 [ext_resource path="res://Portal.gd" type="Script" id=14]
-[ext_resource path="res://Position2D.gd" type="Script" id=15]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=16]
-[ext_resource path="res://RightWall.gd" type="Script" id=17]
-[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=18]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=15]
+[ext_resource path="res://RightWall.gd" type="Script" id=16]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -145,7 +144,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="bookshelf3" type="Sprite" parent="Node2D" index="7"]
 
 modulate = Color( 0.65625, 0.563965, 0.563965, 1 )
-position = Vector2( 290, 416 )
+position = Vector2( 290.952, 423.618 )
 texture = ExtResource( 8 )
 centered = false
 region_enabled = true
@@ -155,7 +154,7 @@ _sections_unfolded = [ "Offset", "Region", "Visibility" ]
 [node name="bookshelf4" type="Sprite" parent="Node2D" index="8"]
 
 modulate = Color( 0.656235, 0.562, 0.562, 1 )
-position = Vector2( 530, 496 )
+position = Vector2( 530.952, 505.522 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 160, 160 )
 _sections_unfolded = [ "Visibility" ]
@@ -234,6 +233,7 @@ disabled = true
 
 [node name="Area2D" type="Area2D" parent="Node2D/LeftWall/StaticBody2D" index="1"]
 
+position = Vector2( -364.729, -169.74 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -243,24 +243,13 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 14 )
 
-[node name="Position2D" type="Position2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="0"]
+[node name="Lighter" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="0" instance=ExtResource( 15 )]
 
-position = Vector2( -1.68908, -129.74 )
+position = Vector2( 415.275, 45.2535 )
 scale = Vector2( 1.45216, 1 )
-script = ExtResource( 15 )
+_sections_unfolded = [ "Collision", "Material", "Visibility" ]
 
-[node name="Position2D2" type="Position2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="1"]
-
-position = Vector2( -1.68908, 20.26 )
-scale = Vector2( 1.45216, 1 )
-
-[node name="Lighter" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="2" instance=ExtResource( 16 )]
-
-position = Vector2( 404.915, 40.26 )
-scale = Vector2( 1.45216, 1 )
-speed = 85
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="1"]
 
 shape = SubResource( 5 )
 
@@ -269,7 +258,7 @@ shape = SubResource( 5 )
 position = Vector2( 663.189, 487.183 )
 scale = Vector2( 0.636379, 1.02598 )
 texture = ExtResource( 13 )
-script = ExtResource( 17 )
+script = ExtResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -286,6 +275,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
 
+position = Vector2( 84.0721, 140.449 )
 shape = SubResource( 3 )
 
 [node name="Light2D2" type="Light2D" parent="." index="2"]
@@ -294,7 +284,7 @@ position = Vector2( 340, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -320,7 +310,7 @@ position = Vector2( 190, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -346,7 +336,7 @@ position = Vector2( 500, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -372,7 +362,7 @@ position = Vector2( 20, 510 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -399,7 +389,5 @@ shadow_item_cull_mask = 1
 [connection signal="body_entered" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D" method="_on_Area2D_body_entered"]
 
 [connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Lighter" method="p"]
-
-[connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Position2D" method="p"]
 
 

@@ -62,7 +62,7 @@ anim_offset_random = 0.0
 anim_loop = false
 _sections_unfolded = [ "Gravity" ]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -164,7 +164,6 @@ disabled = true
 
 [node name="RightWall" type="Sprite" parent="." index="6"]
 
-editor/display_folded = true
 position = Vector2( 321.331, 497.328 )
 scale = Vector2( 0.129148, 4.98493 )
 texture = ExtResource( 5 )
@@ -185,6 +184,7 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
 
 shape = SubResource( 3 )
+disabled = true
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 

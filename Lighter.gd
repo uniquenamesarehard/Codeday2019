@@ -40,7 +40,3 @@ func _physics_process(delta):
 
 
 
-
-func p():
-	position = Vector2($Position2D)
-	pass # replace with function body
