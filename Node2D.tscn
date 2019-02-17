@@ -1,21 +1,21 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Trenchie walk/Trenchcoat Walk-1.png" type="Texture" id=2]
-[ext_resource path="res://Trenchie walk/Trenchcoat Walk-2.png" type="Texture" id=3]
-[ext_resource path="res://Trenchie walk/Trenchcoat Walk-3.png" type="Texture" id=4]
-[ext_resource path="res://Trenchie walk/Trenchcoat Walk-4.png" type="Texture" id=5]
-[ext_resource path="res://AnimatedSprite.gd" type="Script" id=6]
-[ext_resource path="res://Area2D.gd" type="Script" id=7]
-[ext_resource path="res://Node2D.gd" type="Script" id=8]
-[ext_resource path="res://CollisionPolygon2D.gd" type="Script" id=9]
+[ext_resource path="res://CollisionPolygon2D.gd" type="Script" id=2]
+[ext_resource path="res://Trenchie walk/Trenchcoat Walk-1.png" type="Texture" id=3]
+[ext_resource path="res://Trenchie walk/Trenchcoat Walk-2.png" type="Texture" id=4]
+[ext_resource path="res://Trenchie walk/Trenchcoat Walk-3.png" type="Texture" id=5]
+[ext_resource path="res://Trenchie walk/Trenchcoat Walk-4.png" type="Texture" id=6]
+[ext_resource path="res://AnimatedSprite.gd" type="Script" id=7]
+[ext_resource path="res://Area2D.gd" type="Script" id=8]
+[ext_resource path="res://Node2D.gd" type="Script" id=9]
 [ext_resource path="res://Trenchcoat Walk Sheet.png" type="Texture" id=10]
 [ext_resource path="res://WalkinCoolGuy.gd" type="Script" id=11]
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 5.0
@@ -44,15 +44,23 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 speed = 200
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
+
+position = Vector2( -4.78369, 131.608 )
+scale = Vector2( 2.46163, 2.46163 )
+build_mode = 0
+polygon = PoolVector2Array( -4.07674, -45.7272, 10.195, -47.1835, 11.9425, -38.1544, 9.32121, -32.038, 16.894, -25.9215, 19.5153, -15.1449, 19.224, 2.03938, 13.9814, 10.1947, 12.5251, 21.5538, 13.9814, 39.3206, 13.1076, 50.6797, -16.8922, 49.806, -19.5135, 36.1167, -18.6397, 18.9324, -18.6397, 6.69954, -19.2222, -7.86345, -20.096, -19.8051, -11.3582, -33.4943, -4.07674, -34.6593 )
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="1"]
 
 position = Vector2( -2.08182, 132.149 )
 scale = Vector2( 2.46163, 2.46163 )
 frames = SubResource( 2 )
 animation = "Walk"
-frame = 3
+frame = 1
 playing = true
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="KinematicBody2D/AnimatedSprite" index="0"]
 
@@ -64,20 +72,12 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="Node2D" type="Node2D" parent="KinematicBody2D/AnimatedSprite" index="1"]
 
 position = Vector2( -0.658539, 1.31708 )
 scale = Vector2( 1, 1 )
-script = ExtResource( 8 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="1"]
-
-position = Vector2( -4.78366, 131.608 )
-scale = Vector2( 2.46163, 2.46163 )
-build_mode = 0
-polygon = PoolVector2Array( -4.07674, -45.7272, 10.195, -47.1835, 11.9425, -38.1544, 9.32121, -32.038, 16.894, -25.9215, 19.5153, -15.1449, 19.224, 2.03938, 13.9814, 10.1947, 12.5251, 21.5538, 13.9814, 39.3206, 13.1076, 50.6797, -16.8922, 49.806, -19.5135, 36.1167, -18.6397, 18.9324, -18.6397, 6.69954, -19.2222, -7.86345, -20.096, -19.8051, -11.3582, -33.4943, -4.07674, -34.6593 )
 script = ExtResource( 9 )
 
 [node name="WalkinCoolGuy" type="Sprite" parent="." index="1"]
