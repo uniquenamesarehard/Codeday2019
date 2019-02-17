@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Water Pixel.png-0af027261813b1f070df3875c859aad3.stex"
+path="res://.import/Water Pixel.png-8d717adbe122183637b805d5bd54ce84.stex"
 
 [deps]
 
-source_file="res://Water Pixel.png"
-dest_files=[ "res://.import/Water Pixel.png-0af027261813b1f070df3875c859aad3.stex" ]
+source_file="res://Vicki's Test Files/Water Pixel.png"
+dest_files=[ "res://.import/Water Pixel.png-8d717adbe122183637b805d5bd54ce84.stex" ]
 
 [params]
 
