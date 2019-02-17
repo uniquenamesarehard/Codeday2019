@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://IrisMain.gd" type="Script" id=1]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Passage3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hallway.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perimeter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
 
 [node name="IrisMain" type="Node" index="0"]
 
@@ -25,10 +26,13 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
 
-[node name="HUD" parent="." index="1" instance=ExtResource( 2 )]
+[node name="Node" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="Hallway" parent="." index="2" instance=ExtResource( 3 )]
+margin_right = 518.0
+_sections_unfolded = [ "Rect", "Transform" ]
 
-[node name="Hallway2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Perimeter" parent="Node" index="2" instance=ExtResource( 3 )]
+
+[node name="HUD" parent="." index="2" instance=ExtResource( 4 )]
 
 
