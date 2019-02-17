@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://Railing To Basement.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://BGPassage3.png" type="Texture" id=5]
 [ext_resource path="res://BGPassage1.png" type="Texture" id=6]
 [ext_resource path="res://Dumbwaiter.png" type="Texture" id=7]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -151,5 +152,9 @@ bounce = 0.0
 position = Vector2( 9.15781, 0 )
 scale = Vector2( 0.518009, 1 )
 shape = SubResource( 3 )
+
+[node name="Lighter" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 28.7402, 390.815 )
 
 
