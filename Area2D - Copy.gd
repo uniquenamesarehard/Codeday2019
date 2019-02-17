@@ -1,6 +1,5 @@
 extends Area2D
-signal triggered
-
+signal lightning
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -8,6 +7,10 @@ signal triggered
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	connect("lightning", self, "_yeet")
+	var oN = get_node("Lightning")
+	oN.connect("lightning", oN, "_yeet")
+	
 	pass
 
 #func _process(delta):
@@ -15,7 +18,9 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-func _on_Trigger_body_entered(body):
-	emit_signal("triggered")
-	$Collision.disabled = true
+func _On_Body_Entered(signal):
+	self.yeet()
+	emit_signal("lightning")
+	
+func _yeet():
+	pass

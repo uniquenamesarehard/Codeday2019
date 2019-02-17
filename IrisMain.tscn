@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://IrisMain.gd" type="Script" id=1]
+[ext_resource path="res://Hallway.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perimeter.tscn" type="PackedScene" id=3]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Trigger.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="IrisMain" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -3.0
+margin_right = 1020.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+
+[node name="Node" parent="." index="1" instance=ExtResource( 2 )]
+
+margin_right = 518.0
+_sections_unfolded = [ "Rect", "Transform" ]
+
+[node name="Perimeter" parent="Node" index="2" instance=ExtResource( 3 )]
+
+[node name="HUD" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Trigger" type="Area2D" parent="." index="3"]
+
+position = Vector2( 780, 480 )
+scale = Vector2( 1.59375, 1.59375 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Trigger" index="0"]
+
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Lightning" type="Polygon2D" parent="." index="4"]
+
+position = Vector2( 0, -3.05176e-005 )
+polygon = PoolVector2Array( 870, 130, 930, 130, 900, 210, 930, 250, 840, 330, 880, 250, 850, 210 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[connection signal="body_entered" from="Trigger" to="Trigger" method="_on_Trigger_body_entered"]
+
+[connection signal="triggered" from="Trigger" to="." method="lightning"]
+
+
