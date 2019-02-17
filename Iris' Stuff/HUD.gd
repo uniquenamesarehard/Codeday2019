@@ -8,7 +8,8 @@ var blueprint_menu
 
 func _ready():
 	blueprint_menu = get_node("Blueprint")
-	$Panel.show()
+	$Panel.hide()
+	$ExamineText.hide()
 	$MenuButton.show()
 	blueprint_menu.hide()
 	# Called when the node is added to the scene for the first time.
@@ -38,6 +39,12 @@ func _on_closeButton_pressed():
 	blueprint_menu.hide()
 	
 func interactable(text):
-	$Panel/ExamineText.set_visible_characters(0)
-	$Panel/ExamineText.dialog = text
-	$Panel/ExamineText.page = 0
+	$ExamineText.set_visible_characters(0)
+	$ExamineText.page = 0
+	$ExamineText.dialog = text
+	$ExamineText.show()
+	$Panel.show()
+	
+func closeInteractable():
+	$Panel.hide()
+	$ExamineText.hide()

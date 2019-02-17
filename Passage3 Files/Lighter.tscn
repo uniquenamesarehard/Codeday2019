@@ -44,7 +44,7 @@ speed = 150
 position = Vector2( -2.55267, -0.860474 )
 frames = SubResource( 1 )
 animation = "right"
-frame = 1
+frame = 2
 playing = true
 _sections_unfolded = [ "Material" ]
 

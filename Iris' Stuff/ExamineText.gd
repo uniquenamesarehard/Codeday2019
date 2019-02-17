@@ -1,14 +1,15 @@
 extends RichTextLabel
 
+signal closetext
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var dialog = ["Hello friends", "What's up?"]
+var dialog = [""]
 var page = 0
 
 func _ready():
-	set_bbcode(dialog[page])
-	set_visible_characters(0)
+	#set_bbcode(dialog[page])
+	#set_visible_characters(0)
 	set_process(true)
 
 #func _process(delta):
@@ -19,11 +20,14 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"): 
 		if get_visible_characters() > get_total_character_count():
 			if page < dialog.size() -1:
-				page += 1
 				set_bbcode(dialog[page])
 				set_visible_characters(0)
+				page += 1
+			else:
+				emit_signal("closetext")
 		else:
 			set_visible_characters(get_total_character_count())
+			#for some reason text shows one too early
 	
 #func _process(delta):
 #	if Input.is_action_pressed("ui_accept"): 
