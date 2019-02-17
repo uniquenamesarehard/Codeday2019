@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGStudyWallPaper-Wood.png-58ea8a150ca473a36b0009f9fdd45350.stex"
+path="res://.import/BGPassage2.png-9c4a2e9b81fcd93f8d5e9ea41e2f3993.stex"
 
 [deps]
 
-source_file="res://BGStudyWallPaper-Wood.png"
-dest_files=[ "res://.import/BGStudyWallPaper-Wood.png-58ea8a150ca473a36b0009f9fdd45350.stex" ]
+source_file="res://BuildingAssets/BGPassage2.png"
+dest_files=[ "res://.import/BGPassage2.png-9c4a2e9b81fcd93f8d5e9ea41e2f3993.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGStudyWood.png-ffb38f9581364a96cb51ec06f9c42f01.stex"
+path="res://.import/Windowlit.png-bc52daa67142ab6fc896ca5adb9997b6.stex"
 
 [deps]
 
-source_file="res://BGStudyWood.png"
-dest_files=[ "res://.import/BGStudyWood.png-ffb38f9581364a96cb51ec06f9c42f01.stex" ]
+source_file="res://BuildingAssets/Windowlit.png"
+dest_files=[ "res://.import/Windowlit.png-bc52daa67142ab6fc896ca5adb9997b6.stex" ]
 
 [params]
 

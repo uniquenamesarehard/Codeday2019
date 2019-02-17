@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGBasement.png-370be3dbfe0576165b8c0e6ffa6c3fa5.stex"
+path="res://.import/candle.png-6141c6177c98d5823bbe8680a8e01139.stex"
 
 [deps]
 
-source_file="res://BGBasement.png"
-dest_files=[ "res://.import/BGBasement.png-370be3dbfe0576165b8c0e6ffa6c3fa5.stex" ]
+source_file="res://BuildingAssets/candle.png"
+dest_files=[ "res://.import/candle.png-6141c6177c98d5823bbe8680a8e01139.stex" ]
 
 [params]
 

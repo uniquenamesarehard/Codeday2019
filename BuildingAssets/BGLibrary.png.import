@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGBasementStone.png-dd9939e92a0967f7508c551bcab31f8b.stex"
+path="res://.import/BGLibrary.png-80b1ab7c2758a48eb9131a8e0c02f943.stex"
 
 [deps]
 
-source_file="res://BGBasementStone.png"
-dest_files=[ "res://.import/BGBasementStone.png-dd9939e92a0967f7508c551bcab31f8b.stex" ]
+source_file="res://BuildingAssets/BGLibrary.png"
+dest_files=[ "res://.import/BGLibrary.png-80b1ab7c2758a48eb9131a8e0c02f943.stex" ]
 
 [params]
 

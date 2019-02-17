@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WallSconce.png-b2063c0f13785d424bbfa1d87e8265cf.stex"
+path="res://.import/BGBasement.png-b139acd43c22b524f819a3a24dbc272b.stex"
 
 [deps]
 
-source_file="res://WallSconce.png"
-dest_files=[ "res://.import/WallSconce.png-b2063c0f13785d424bbfa1d87e8265cf.stex" ]
+source_file="res://BuildingAssets/BGBasement.png"
+dest_files=[ "res://.import/BGBasement.png-b139acd43c22b524f819a3a24dbc272b.stex" ]
 
 [params]
 

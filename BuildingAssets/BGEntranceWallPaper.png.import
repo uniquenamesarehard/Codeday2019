@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Windowlit.png-615f9328a466220d53610818b2f7e044.stex"
+path="res://.import/BGEntranceWallPaper.png-8f022a3f0b9060e72abd1d65eb50ae9b.stex"
 
 [deps]
 
-source_file="res://Windowlit.png"
-dest_files=[ "res://.import/Windowlit.png-615f9328a466220d53610818b2f7e044.stex" ]
+source_file="res://BuildingAssets/BGEntranceWallPaper.png"
+dest_files=[ "res://.import/BGEntranceWallPaper.png-8f022a3f0b9060e72abd1d65eb50ae9b.stex" ]
 
 [params]
 

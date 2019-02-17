@@ -1,10 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Perimeter.gd" type="Script" id=1]
-[ext_resource path="res://BGStudyWood.png" type="Texture" id=2]
-[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=3]
-[ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=4]
+[ext_resource path="res://BuildingAssets/BGStudyWood.png" type="Texture" id=2]
+[ext_resource path="res://BuildingAssets/BGEntranceWallPaper.png" type="Texture" id=3]
+[ext_resource path="res://BuildingAssets/BGStudyWallpaper.png" type="Texture" id=4]
 [ext_resource path="res://TestSprite.tscn" type="PackedScene" id=5]
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

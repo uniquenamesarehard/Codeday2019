@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BGStudyWallpaper.png-5a3115e0ad16f4fc14068904c839119c.stex"
+path="res://.import/BGStudyWallpaper.png-2bf4752b44f5423b63b69e5c4d9caa31.stex"
 
 [deps]
 
-source_file="res://BGStudyWallpaper.png"
-dest_files=[ "res://.import/BGStudyWallpaper.png-5a3115e0ad16f4fc14068904c839119c.stex" ]
+source_file="res://BuildingAssets/BGStudyWallpaper.png"
+dest_files=[ "res://.import/BGStudyWallpaper.png-2bf4752b44f5423b63b69e5c4d9caa31.stex" ]
 
 [params]
 
