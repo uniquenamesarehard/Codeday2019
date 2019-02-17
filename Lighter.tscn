@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Trenchcoat Lighter Walk-1.png" type="Texture" id=2]
-[ext_resource path="res://Trenchcoat Lighter Walk-2.png" type="Texture" id=3]
-[ext_resource path="res://Trenchcoat Lighter Walk-3.png" type="Texture" id=4]
-[ext_resource path="res://Trenchcoat Lighter Walk-4.png" type="Texture" id=5]
-[ext_resource path="res://light0.png" type="Texture" id=6]
-[ext_resource path="res://Light2D.gd" type="Script" id=7]
+[ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-1.png" type="Texture" id=2]
+[ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-2.png" type="Texture" id=3]
+[ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-3.png" type="Texture" id=4]
+[ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-4.png" type="Texture" id=5]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=6]
+[ext_resource path="res://Passage3 Files/Light2D.gd" type="Script" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -21,6 +21,9 @@ animations = [ {
 
 modulate = Color( 0.445312, 0.445312, 0.445312, 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
@@ -31,12 +34,17 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 speed = 200
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 90, 50, 90, 60, 80, 60, 70, 80, 80, 80, 80, 110, 80, 140, 100, 140, 100, 110, 110, 90, 110, 70, 100, 60, 100, 50, 100, 50 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D" index="1"]
 
 position = Vector2( 90, 90 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 3
 playing = true
 _sections_unfolded = [ "Material" ]
 __meta__ = {
