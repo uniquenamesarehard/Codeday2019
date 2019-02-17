@@ -36,3 +36,6 @@ func _on_MenuButton_pressed():
 func _on_closeButton_pressed():
 	blueprint_menu.hide()
 	
+func interactable(text):
+	$Panel/ExamineText.dialog = text
+	pass # replace with function body

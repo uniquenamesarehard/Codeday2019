@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/quicksand.jpg-b65d39d2e86a25dc5b20aeec40583094.stex"
+path="res://.import/Blueprint.jpg-cf2bda9707580ec43d45fcb574c334fa.stex"
 
 [deps]
 
-source_file="res://Iris' Assets/fonts/quicksand.jpg"
-dest_files=[ "res://.import/quicksand.jpg-b65d39d2e86a25dc5b20aeec40583094.stex" ]
+source_file="res://Iris' Stuff/assets/Blueprint.jpg"
+dest_files=[ "res://.import/Blueprint.jpg-cf2bda9707580ec43d45fcb574c334fa.stex" ]
 
 [params]
 
