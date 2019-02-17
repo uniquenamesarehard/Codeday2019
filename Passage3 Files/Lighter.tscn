@@ -9,7 +9,6 @@
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=7]
 [ext_resource path="res://Passage3 Files/Light2D.gd" type="Script" id=8]
 
-
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
@@ -45,7 +44,7 @@ speed = 150
 position = Vector2( -2.55267, -0.860474 )
 frames = SubResource( 1 )
 animation = "right"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Material" ]
 
