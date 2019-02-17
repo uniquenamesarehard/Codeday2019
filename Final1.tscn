@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://LibraryStage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Study.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Blueprint Fl2.png" type="Texture" id=7]
 [ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=8]
 [ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=9]
-[ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 
@@ -58,7 +57,5 @@ material = SubResource( 1 )
 position = Vector2( 510, 470 )
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Material" ]
-
-[node name="HUD" parent="." index="5" instance=ExtResource( 10 )]
 
 
