@@ -4,7 +4,7 @@ extends KinematicBody2D
 # move_and_slide works.
 
 # Member 
-export (int) var speed = 300
+export (int) var speed = 250
 var screensize = 480*270
 const MOTION_SPEED = 160 # Pixels/second
 
