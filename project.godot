@@ -11,7 +11,8 @@ config_version=3
 [application]
 
 config/name="Codeday2019"
-run/main_scene="res://Codeday.tscn"
+run/main_scene="res://Passage3.tscn"
+config/use_custom_user_dir=true
 config/icon="res://icon.png"
 
 [display]
