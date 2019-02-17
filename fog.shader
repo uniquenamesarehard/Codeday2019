@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform vec3 color = vec3(0.5, 0.0, 0.13);
+uniform vec3 color = vec3(0.1, 0.1, 0.13);
 uniform int OCTAVES = 1;
 
 float rand(vec2 coord){
