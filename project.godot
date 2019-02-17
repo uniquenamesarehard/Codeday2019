@@ -11,12 +11,14 @@ config_version=3
 [application]
 
 config/name="Codeday2019"
+run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=480
 window/size/height=270
+window/dpi/allow_hidpi=true
 
 [rendering]
 

@@ -19,12 +19,12 @@ __meta__ = {
 
 [node name="WalkinCoolGuy" type="Sprite" parent="." index="0"]
 
-position = Vector2( 184.361, 137.223 )
-scale = Vector2( 1.52562, 1.52562 )
+position = Vector2( 225.41, 127.826 )
+scale = Vector2( 2.46163, 2.46163 )
 texture = SubResource( 1 )
 vframes = 2
 hframes = 3
 script = ExtResource( 2 )
-_sections_unfolded = [ "Animation" ]
+_sections_unfolded = [ "Animation", "Material", "Offset", "Visibility" ]
 
 
