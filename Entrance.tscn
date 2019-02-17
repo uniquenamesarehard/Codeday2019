@@ -6,12 +6,17 @@
 [ext_resource path="res://WallSconce.png" type="Texture" id=4]
 [ext_resource path="res://BGPassage1.png" type="Texture" id=5]
 [ext_resource path="res://BGEntranceWallPaper-Wood.png" type="Texture" id=6]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 2.78381, 15.9595 )
+
+[sub_resource type="SegmentShape2D" id=4]
+
+custom_solver_bias = 0.0
+a = Vector2( -684.895, -9.02886 )
+b = Vector2( 24.047, 7.48481 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -23,7 +28,7 @@ extents = Vector2( 33.8819, 16.256 )
 custom_solver_bias = 0.0
 extents = Vector2( 38.4006, 15.9676 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -124,6 +129,10 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor/StaticBody2D" index="1"]
+
+shape = SubResource( 4 )
+
 [node name="Sprite2" type="Sprite" parent="." index="8"]
 
 position = Vector2( -0.469643, 336.052 )
@@ -169,9 +178,5 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D" index="0"]
 
 shape = SubResource( 3 )
-
-[node name="Lighter" parent="." index="10" instance=ExtResource( 7 )]
-
-position = Vector2( 153.593, 361.331 )
 
 
