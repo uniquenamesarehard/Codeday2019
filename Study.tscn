@@ -136,7 +136,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="lamps2" type="Sprite" parent="." index="8"]
 
-position = Vector2( 223, 445 )
+position = Vector2( 223, 450.424 )
 texture = ExtResource( 9 )
 centered = false
 region_enabled = true
