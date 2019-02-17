@@ -25,7 +25,7 @@ shader_param/color = null
 shader_param/OCTAVES = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Codeday" type="Node2D" index="0"]
+[node name="Codeday" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true
