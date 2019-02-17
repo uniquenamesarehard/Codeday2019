@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
@@ -11,11 +11,12 @@
 [ext_resource path="res://BGStudyWood.png" type="Texture" id=9]
 [ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=10]
 [ext_resource path="res://BGPassage1.png" type="Texture" id=11]
+[ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.9971, 15.907 )
+extents = Vector2( 35.6089, 15.907 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -32,7 +33,7 @@ extents = Vector2( 34.019, 16.3412 )
 custom_solver_bias = 0.0
 extents = Vector2( 28.085, 16 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -214,5 +215,9 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall2/StaticBody2D" index="0"]
 
 shape = SubResource( 4 )
+
+[node name="Lighter" parent="." index="12" instance=ExtResource( 12 )]
+
+position = Vector2( 30.0967, 491.416 )
 
 
