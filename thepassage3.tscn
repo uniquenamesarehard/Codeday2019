@@ -22,7 +22,7 @@ extents = Vector2( 49.0993, 15.5709 )
 custom_solver_bias = 0.0
 extents = Vector2( 62.5342, 16.0347 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -73,6 +73,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="Floor" type="Sprite" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 160.669, 582.545 )
 rotation = 1.5708
 scale = Vector2( 0.458912, 10.0175 )
@@ -98,6 +99,7 @@ shape = SubResource( 1 )
 
 [node name="LeftWall" type="Sprite" parent="." index="5"]
 
+editor/display_folded = true
 position = Vector2( 0.29129, 496.565 )
 scale = Vector2( 0.184637, 5.07274 )
 texture = ExtResource( 5 )
@@ -121,6 +123,7 @@ shape = SubResource( 2 )
 
 [node name="RightWall" type="Sprite" parent="." index="6"]
 
+editor/display_folded = true
 position = Vector2( 321.331, 497.328 )
 scale = Vector2( 0.129148, 4.98493 )
 texture = ExtResource( 5 )
