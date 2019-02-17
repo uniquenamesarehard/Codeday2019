@@ -1,36 +1,42 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://LibraryStage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Study.tscn" type="PackedScene" id=2]
 [ext_resource path="res://thepassage3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Kitchen.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Blueprint Fl1.png" type="Texture" id=5]
-[ext_resource path="res://Blueprint Fl2.png" type="Texture" id=6]
-[ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=7]
-[ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=8]
+[ext_resource path="res://Entrance.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Blueprint Fl1.png" type="Texture" id=6]
+[ext_resource path="res://Blueprint Fl2.png" type="Texture" id=7]
+[ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=8]
+[ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=9]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0
-shader = ExtResource( 7 )
+shader = ExtResource( 8 )
 shader_param/color = null
 shader_param/OCTAVES = null
 
 [node name="Node2D" index="0" instance=ExtResource( 1 )]
 
-position = Vector2( -0.39624, -278.513 )
+position = Vector2( 10, -440 )
 
 [node name="Node2D" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 676.609, 58.3859 )
+position = Vector2( 680, 70 )
 
 [node name="Node2D" parent="Node2D" index="15" instance=ExtResource( 3 )]
 
-position = Vector2( -676.213, -189.873 )
+position = Vector2( -20, 350 )
 
 [node name="Node2D" parent="Node2D/Node2D" index="9" instance=ExtResource( 4 )]
 
-position = Vector2( 580, 0 )
+position = Vector2( -70, -210 )
+
+[node name="Node2D" parent="Node2D/Node2D/Node2D" index="6" instance=ExtResource( 5 )]
+
+position = Vector2( -590, 160 )
 
 [node name="TileMap" parent="." index="1"]
 
@@ -38,26 +44,21 @@ tile_data = PoolIntArray( 393246, 0, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0
 
 [node name="Blueprint Fl1" type="Sprite" parent="." index="2"]
 
-position = Vector2( 160.396, 728.513 )
-texture = ExtResource( 5 )
+position = Vector2( 140, 930 )
+texture = ExtResource( 6 )
 
 [node name="Blueprint Fl2" type="Sprite" parent="." index="3"]
 
-position = Vector2( 470.396, 728.513 )
-texture = ExtResource( 6 )
+position = Vector2( 440, 930 )
+texture = ExtResource( 7 )
 
 [node name="white" type="Sprite" parent="." index="4"]
 
 material = SubResource( 1 )
-position = Vector2( 505.809, 538.256 )
-texture = ExtResource( 8 )
+position = Vector2( 510, 470 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Material" ]
 
-[node name="white2" type="Sprite" parent="." index="5"]
-
-material = SubResource( 1 )
-position = Vector2( 505.809, 538.256 )
-texture = ExtResource( 8 )
-_sections_unfolded = [ "Material" ]
+[node name="HUD" parent="." index="5" instance=ExtResource( 10 )]
 
 

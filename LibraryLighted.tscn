@@ -278,7 +278,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
 
-position = Vector2( 84.0721, 140.449 )
+position = Vector2( 24.2228, 13.8953 )
 shape = SubResource( 3 )
 
 [node name="Light2D2" type="Light2D" parent="." index="2"]
