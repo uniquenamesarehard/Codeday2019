@@ -1,4 +1,5 @@
 extends Node
+var screensize = 320*160
 
 # class member variables go here, for example:
 # var a = 2
@@ -14,4 +15,4 @@ func _ready():
 #	# Update game logic here.
 #	pass
 func L():
-	pass # replace with function body
+	screensize = get_viewport_rect().size
