@@ -2,9 +2,9 @@
 
 [ext_resource path="res://IrisMain.gd" type="Script" id=1]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=2]
-[ext_resource path="res://SpriteAssets/Trenchcoat Walk-1.png" type="Texture" id=3]
+[ext_resource path="res://Passage3.tscn" type="PackedScene" id=3]
 
-[node name="IrisMain" type="Node"]
+[node name="IrisMain" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -27,15 +27,8 @@ color = Color( 1, 1, 1, 1 )
 
 [node name="HUD" parent="." index="1" instance=ExtResource( 2 )]
 
-[node name="StartPosition" type="Position2D" parent="." index="2"]
+[node name="Hallway" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 210, 310 )
-
-[node name="Trenchcoat Walk-1" type="Sprite" parent="." index="3"]
-
-position = Vector2( 510, 300 )
-scale = Vector2( 2.5, 2.5 )
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Region", "Transform", "Visibility", "Z Index" ]
+[node name="Hallway2" parent="." index="3" instance=ExtResource( 3 )]
 
 

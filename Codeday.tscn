@@ -10,6 +10,23 @@
 [ext_resource path="res://SpriteAssets/Trenchcoat img.png" type="Texture" id=8]
 [ext_resource path="res://BuildingAssets/BGEntranceWallPaper.png" type="Texture" id=9]
 
+<<<<<<< HEAD
+=======
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -1050, -750, 1050, -750, 1050, 750, -1050, 750 )
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 9 )
+shader_param/color = null
+shader_param/OCTAVES = null
+_sections_unfolded = [ "shader_param" ]
+
+>>>>>>> master
 [node name="Codeday" type="Node2D"]
 
 __meta__ = {
@@ -157,7 +174,6 @@ __meta__ = {
 "_edit_group_": true
 }
 speed = 200
-rotation_speed = 1.5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
 
