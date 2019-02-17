@@ -10,8 +10,8 @@
 [ext_resource path="res://WallBookCase.png" type="Texture" id=8]
 [ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=9]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=10]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=12]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=11]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,7 +28,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.51538, 80.0728 )
 
-[node name="TileMap" type="TileMap"]
+[node name="TileMap" type="TileMap" index="0"]
 
 position = Vector2( 0, 30 )
 mode = 0
@@ -166,7 +166,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="LeftWall" type="Sprite" parent="Node2D" index="12"]
 
-editor/display_folded = true
 position = Vector2( 1.16315, 489.74 )
 scale = Vector2( 0.68863, 1 )
 texture = ExtResource( 10 )
@@ -188,10 +187,6 @@ bounce = 0.0
 
 scale = Vector2( 1, 8.0357 )
 shape = SubResource( 2 )
-
-[node name="Lighter" parent="Node2D/LeftWall" index="1" instance=ExtResource( 11 )]
-
-position = Vector2( 35.4909, 36.7007 )
 
 [node name="RightWall" type="Sprite" parent="." index="1"]
 
@@ -223,7 +218,7 @@ position = Vector2( 340, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -249,7 +244,7 @@ position = Vector2( 190, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -275,7 +270,7 @@ position = Vector2( 500, 440 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -301,7 +296,7 @@ position = Vector2( 20, 510 )
 scale = Vector2( 0.63369, 0.63369 )
 enabled = true
 editor_only = false
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 1, 1, 1, 1 )
@@ -320,5 +315,9 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+
+[node name="Lighter" parent="." index="6" instance=ExtResource( 12 )]
+
+position = Vector2( 40, 530 )
 
 
