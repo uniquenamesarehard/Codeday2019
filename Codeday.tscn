@@ -10,7 +10,7 @@
 [ext_resource path="res://Trenchcoat img.png" type="Texture" id=8]
 [ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=9]
 
-[node name="Codeday" type="Node2D" index="0"]
+[node name="Codeday" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true
