@@ -41,7 +41,7 @@ closed = true
 cull_mode = 0
 polygon = PoolVector2Array( 47.8036, 48.2009, 47.8036, 207.363, 56.6667, 226.667, 56.6667, 198.333, 56.6667, 28.3334 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 10, 60 )
 

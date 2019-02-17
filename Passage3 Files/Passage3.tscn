@@ -552,11 +552,10 @@ custom_solver_bias = 0.0
 radius = 10.0
 height = 20.0
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 modulate = Color( 0.328125, 0.328125, 0.328125, 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
@@ -899,7 +898,316 @@ h_frames = 1
 v_frames = 1
 _sections_unfolded = [ "Process Material", "Visibility" ]
 
-[node name="Sprite" type="Sprite" parent="Node2D" index="3"]
+[node name="Window2" type="Sprite" parent="Node2D" index="3"]
+
+editor/display_folded = true
+position = Vector2( 220, 497.625 )
+scale = Vector2( 1.25, 1.22135 )
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 64, 96 )
+
+[node name="Particles2D" type="Particles2D" parent="Node2D/Window2" index="0"]
+
+show_behind_parent = true
+position = Vector2( -7.45125, -45.3258 )
+scale = Vector2( 1.85611, 1.96548 )
+emitting = true
+amount = 100
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 1 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D2" type="Particles2D" parent="Node2D/Window2" index="1"]
+
+show_behind_parent = true
+position = Vector2( 16.9538, -40.5108 )
+scale = Vector2( 1.62639, 1.98429 )
+emitting = true
+amount = 20
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 2 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Visibility" ]
+
+[node name="Particles2D3" type="Particles2D" parent="Node2D/Window2" index="2"]
+
+modulate = Color( 0.871094, 0.871094, 0.871094, 1 )
+show_behind_parent = true
+position = Vector2( 14.3075, -30.58 )
+scale = Vector2( 1.83774, 2.12535 )
+emitting = true
+amount = 50
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 3 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D4" type="Particles2D" parent="Node2D/Window2" index="3"]
+
+modulate = Color( 0.863281, 0.863281, 0.863281, 1 )
+show_behind_parent = true
+position = Vector2( -28.3279, -35.094 )
+scale = Vector2( 1.71828, 1.23195 )
+emitting = true
+amount = 20
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D5" type="Particles2D" parent="Node2D/Window2" index="4"]
+
+show_behind_parent = true
+position = Vector2( 5.19235, -55.5576 )
+scale = Vector2( 1.35074, 1.45765 )
+emitting = true
+amount = 30
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 5 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D6" type="Particles2D" parent="Node2D/Window2" index="5"]
+
+show_behind_parent = true
+position = Vector2( -24.2114, -38.7052 )
+scale = Vector2( 1.53451, 1.47646 )
+emitting = true
+amount = 10
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 6 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D7" type="Particles2D" parent="Node2D/Window2" index="6"]
+
+position = Vector2( 4.97353, -40.5108 )
+scale = Vector2( 1.15542, 1.40123 )
+emitting = true
+amount = 20
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 7 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material" ]
+
+[node name="Particles2D8" type="Particles2D" parent="Node2D/Window2" index="7"]
+
+show_behind_parent = true
+position = Vector2( 14.0887, -46.8305 )
+scale = Vector2( 1.44027, 1.99369 )
+emitting = true
+amount = 15
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 8 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D9" type="Particles2D" parent="Node2D/Window2" index="8"]
+
+show_behind_parent = true
+position = Vector2( 8.20794, -1.99843 )
+scale = Vector2( 1.2565, 1.06245 )
+emitting = true
+amount = 20
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 9 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D10" type="Particles2D" parent="Node2D/Window2" index="9"]
+
+show_behind_parent = true
+position = Vector2( -10.0725, -1.69748 )
+scale = Vector2( 1.31477, 1.05305 )
+emitting = true
+amount = 20
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Particles2D11" type="Particles2D" parent="Node2D/Window2" index="10"]
+
+show_behind_parent = true
+position = Vector2( -15.9783, -42.9183 )
+scale = Vector2( 1.58964, 2.19118 )
+emitting = true
+amount = 15
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 11 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Transform", "Visibility" ]
+
+[node name="Particles2D12" type="Particles2D" parent="Node2D/Window2" index="11"]
+
+show_behind_parent = true
+position = Vector2( 24.8929, -36.8996 )
+scale = Vector2( 1.28641, 1.30719 )
+emitting = true
+amount = 8
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 12 )
+texture = null
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="Node2D" index="4"]
 
 position = Vector2( 0, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -909,7 +1217,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite18" type="Sprite" parent="Node2D" index="4"]
+[node name="Sprite18" type="Sprite" parent="Node2D" index="5"]
 
 position = Vector2( 40, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -919,7 +1227,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite21" type="Sprite" parent="Node2D" index="5"]
+[node name="Sprite21" type="Sprite" parent="Node2D" index="6"]
 
 position = Vector2( 80, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -929,7 +1237,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite34" type="Sprite" parent="Node2D" index="6"]
+[node name="Sprite34" type="Sprite" parent="Node2D" index="7"]
 
 position = Vector2( 160, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -939,7 +1247,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite2" type="Sprite" parent="Node2D" index="7"]
+[node name="Sprite2" type="Sprite" parent="Node2D" index="8"]
 
 position = Vector2( 0, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -949,7 +1257,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite38" type="Sprite" parent="Node2D" index="8"]
+[node name="Sprite38" type="Sprite" parent="Node2D" index="9"]
 
 position = Vector2( 200, 554 )
 scale = Vector2( 1.25, 1.25 )
@@ -959,7 +1267,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite19" type="Sprite" parent="Node2D" index="9"]
+[node name="Sprite19" type="Sprite" parent="Node2D" index="10"]
 
 position = Vector2( 40, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -969,7 +1277,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite42" type="Sprite" parent="Node2D" index="10"]
+[node name="Sprite42" type="Sprite" parent="Node2D" index="11"]
 
 position = Vector2( 240, 554 )
 scale = Vector2( 1.25, 1.25 )
@@ -979,7 +1287,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite23" type="Sprite" parent="Node2D" index="11"]
+[node name="Sprite23" type="Sprite" parent="Node2D" index="12"]
 
 position = Vector2( 80, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -989,7 +1297,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite44" type="Sprite" parent="Node2D" index="12"]
+[node name="Sprite44" type="Sprite" parent="Node2D" index="13"]
 
 position = Vector2( 280, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -999,7 +1307,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite28" type="Sprite" parent="Node2D" index="13"]
+[node name="Sprite28" type="Sprite" parent="Node2D" index="14"]
 
 position = Vector2( 120, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -1009,7 +1317,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite54" type="Sprite" parent="Node2D" index="14"]
+[node name="Sprite54" type="Sprite" parent="Node2D" index="15"]
 
 position = Vector2( 320, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -1019,7 +1327,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite33" type="Sprite" parent="Node2D" index="15"]
+[node name="Sprite33" type="Sprite" parent="Node2D" index="16"]
 
 position = Vector2( 140, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -1029,7 +1337,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite53" type="Sprite" parent="Node2D" index="16"]
+[node name="Sprite53" type="Sprite" parent="Node2D" index="17"]
 
 position = Vector2( 360, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -1039,7 +1347,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite58" type="Sprite" parent="Node2D" index="17"]
+[node name="Sprite58" type="Sprite" parent="Node2D" index="18"]
 
 position = Vector2( 400, 520 )
 scale = Vector2( 1.25, 1.25 )
@@ -1049,7 +1357,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite3" type="Sprite" parent="Node2D" index="18"]
+[node name="Sprite3" type="Sprite" parent="Node2D" index="19"]
 
 position = Vector2( 0, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1059,7 +1367,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite16" type="Sprite" parent="Node2D" index="19"]
+[node name="Sprite16" type="Sprite" parent="Node2D" index="20"]
 
 position = Vector2( 40, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1069,7 +1377,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite41" type="Sprite" parent="Node2D" index="20"]
+[node name="Sprite41" type="Sprite" parent="Node2D" index="21"]
 
 position = Vector2( 260, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1079,7 +1387,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite63" type="Sprite" parent="Node2D" index="21"]
+[node name="Sprite63" type="Sprite" parent="Node2D" index="22"]
 
 position = Vector2( 260, 514 )
 scale = Vector2( 1.25, 1.25 )
@@ -1089,7 +1397,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite22" type="Sprite" parent="Node2D" index="22"]
+[node name="Sprite22" type="Sprite" parent="Node2D" index="23"]
 
 position = Vector2( 80, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1099,7 +1407,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite40" type="Sprite" parent="Node2D" index="23"]
+[node name="Sprite40" type="Sprite" parent="Node2D" index="24"]
 
 position = Vector2( 280, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1109,7 +1417,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite27" type="Sprite" parent="Node2D" index="24"]
+[node name="Sprite27" type="Sprite" parent="Node2D" index="25"]
 
 position = Vector2( 120, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1119,7 +1427,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite51" type="Sprite" parent="Node2D" index="25"]
+[node name="Sprite51" type="Sprite" parent="Node2D" index="26"]
 
 position = Vector2( 320, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1129,7 +1437,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite32" type="Sprite" parent="Node2D" index="26"]
+[node name="Sprite32" type="Sprite" parent="Node2D" index="27"]
 
 position = Vector2( 140, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1139,7 +1447,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite48" type="Sprite" parent="Node2D" index="27"]
+[node name="Sprite48" type="Sprite" parent="Node2D" index="28"]
 
 position = Vector2( 360, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1149,7 +1457,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite59" type="Sprite" parent="Node2D" index="28"]
+[node name="Sprite59" type="Sprite" parent="Node2D" index="29"]
 
 position = Vector2( 400, 480 )
 scale = Vector2( 1.25, 1.25 )
@@ -1159,7 +1467,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite4" type="Sprite" parent="Node2D" index="29"]
+[node name="Sprite4" type="Sprite" parent="Node2D" index="30"]
 
 position = Vector2( 0, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1169,7 +1477,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite17" type="Sprite" parent="Node2D" index="30"]
+[node name="Sprite17" type="Sprite" parent="Node2D" index="31"]
 
 position = Vector2( 40, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1179,7 +1487,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite47" type="Sprite" parent="Node2D" index="31"]
+[node name="Sprite47" type="Sprite" parent="Node2D" index="32"]
 
 position = Vector2( 260, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1189,7 +1497,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite25" type="Sprite" parent="Node2D" index="32"]
+[node name="Sprite25" type="Sprite" parent="Node2D" index="33"]
 
 position = Vector2( 80, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1199,7 +1507,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite46" type="Sprite" parent="Node2D" index="33"]
+[node name="Sprite46" type="Sprite" parent="Node2D" index="34"]
 
 position = Vector2( 280, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1209,7 +1517,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite30" type="Sprite" parent="Node2D" index="34"]
+[node name="Sprite30" type="Sprite" parent="Node2D" index="35"]
 
 position = Vector2( 120, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1219,7 +1527,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite50" type="Sprite" parent="Node2D" index="35"]
+[node name="Sprite50" type="Sprite" parent="Node2D" index="36"]
 
 position = Vector2( 320, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1229,7 +1537,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite31" type="Sprite" parent="Node2D" index="36"]
+[node name="Sprite31" type="Sprite" parent="Node2D" index="37"]
 
 position = Vector2( 140, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1239,7 +1547,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite52" type="Sprite" parent="Node2D" index="37"]
+[node name="Sprite52" type="Sprite" parent="Node2D" index="38"]
 
 position = Vector2( 360, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1249,7 +1557,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite57" type="Sprite" parent="Node2D" index="38"]
+[node name="Sprite57" type="Sprite" parent="Node2D" index="39"]
 
 position = Vector2( 400, 440 )
 scale = Vector2( 1.25, 1.25 )
@@ -1259,7 +1567,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite5" type="Sprite" parent="Node2D" index="39"]
+[node name="Sprite5" type="Sprite" parent="Node2D" index="40"]
 
 position = Vector2( 0, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1269,7 +1577,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite39" type="Sprite" parent="Node2D" index="40"]
+[node name="Sprite39" type="Sprite" parent="Node2D" index="41"]
 
 position = Vector2( 200, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1279,7 +1587,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite20" type="Sprite" parent="Node2D" index="41"]
+[node name="Sprite20" type="Sprite" parent="Node2D" index="42"]
 
 position = Vector2( 40, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1289,7 +1597,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite43" type="Sprite" parent="Node2D" index="42"]
+[node name="Sprite43" type="Sprite" parent="Node2D" index="43"]
 
 position = Vector2( 240, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1299,7 +1607,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite24" type="Sprite" parent="Node2D" index="43"]
+[node name="Sprite24" type="Sprite" parent="Node2D" index="44"]
 
 position = Vector2( 80, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1309,7 +1617,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite45" type="Sprite" parent="Node2D" index="44"]
+[node name="Sprite45" type="Sprite" parent="Node2D" index="45"]
 
 position = Vector2( 280, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1319,7 +1627,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite29" type="Sprite" parent="Node2D" index="45"]
+[node name="Sprite29" type="Sprite" parent="Node2D" index="46"]
 
 position = Vector2( 120, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1329,7 +1637,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite55" type="Sprite" parent="Node2D" index="46"]
+[node name="Sprite55" type="Sprite" parent="Node2D" index="47"]
 
 position = Vector2( 320, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1339,7 +1647,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite35" type="Sprite" parent="Node2D" index="47"]
+[node name="Sprite35" type="Sprite" parent="Node2D" index="48"]
 
 position = Vector2( 160, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1349,7 +1657,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite49" type="Sprite" parent="Node2D" index="48"]
+[node name="Sprite49" type="Sprite" parent="Node2D" index="49"]
 
 position = Vector2( 360, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1359,7 +1667,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite56" type="Sprite" parent="Node2D" index="49"]
+[node name="Sprite56" type="Sprite" parent="Node2D" index="50"]
 
 position = Vector2( 400, 400 )
 scale = Vector2( 1.25, 1.25 )
@@ -1369,7 +1677,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite6" type="Sprite" parent="Node2D" index="50"]
+[node name="Sprite6" type="Sprite" parent="Node2D" index="51"]
 
 position = Vector2( 40, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1379,7 +1687,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite7" type="Sprite" parent="Node2D" index="51"]
+[node name="Sprite7" type="Sprite" parent="Node2D" index="52"]
 
 position = Vector2( 80, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1389,7 +1697,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite8" type="Sprite" parent="Node2D" index="52"]
+[node name="Sprite8" type="Sprite" parent="Node2D" index="53"]
 
 position = Vector2( 120, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1399,7 +1707,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite9" type="Sprite" parent="Node2D" index="53"]
+[node name="Sprite9" type="Sprite" parent="Node2D" index="54"]
 
 position = Vector2( 160, 554 )
 scale = Vector2( 1.25, 1.25 )
@@ -1409,7 +1717,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite10" type="Sprite" parent="Node2D" index="54"]
+[node name="Sprite10" type="Sprite" parent="Node2D" index="55"]
 
 position = Vector2( 200, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1419,7 +1727,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite11" type="Sprite" parent="Node2D" index="55"]
+[node name="Sprite11" type="Sprite" parent="Node2D" index="56"]
 
 position = Vector2( 240, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1429,7 +1737,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite12" type="Sprite" parent="Node2D" index="56"]
+[node name="Sprite12" type="Sprite" parent="Node2D" index="57"]
 
 position = Vector2( 280, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1439,7 +1747,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite13" type="Sprite" parent="Node2D" index="57"]
+[node name="Sprite13" type="Sprite" parent="Node2D" index="58"]
 
 position = Vector2( 320, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1449,7 +1757,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite14" type="Sprite" parent="Node2D" index="58"]
+[node name="Sprite14" type="Sprite" parent="Node2D" index="59"]
 
 position = Vector2( 360, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1459,7 +1767,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite15" type="Sprite" parent="Node2D" index="59"]
+[node name="Sprite15" type="Sprite" parent="Node2D" index="60"]
 
 position = Vector2( 400, 560 )
 scale = Vector2( 1.25, 1.25 )
@@ -1469,7 +1777,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite60" type="Sprite" parent="Node2D" index="60"]
+[node name="Sprite60" type="Sprite" parent="Node2D" index="61"]
 
 position = Vector2( 100, 460 )
 scale = Vector2( 1.25, 1.25 )
@@ -1479,7 +1787,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
 _sections_unfolded = [ "Offset", "Region" ]
 
-[node name="Sprite61" type="Sprite" parent="Node2D" index="61"]
+[node name="Sprite61" type="Sprite" parent="Node2D" index="62"]
 
 position = Vector2( 300, 460 )
 scale = Vector2( 1.25, 1.25 )
@@ -1695,7 +2003,7 @@ _sections_unfolded = [ "Material" ]
 
 [node name="Light2D" type="Light2D" parent="." index="7"]
 
-position = Vector2( 220, 500 )
+position = Vector2( 217.784, 500 )
 scale = Vector2( 3.42578, 3.42578 )
 enabled = true
 editor_only = false
