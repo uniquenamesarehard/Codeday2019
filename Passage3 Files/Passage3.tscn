@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Passage3 Files/Passage3.gd" type="Script" id=1]
 [ext_resource path="res://Art Files/BGPassage3.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=11]
 [ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=12]
+[ext_resource path="res://Area2D.gd" type="Script" id=13]
 
 [sub_resource type="ParticlesMaterial" id=1]
 
@@ -1705,11 +1706,14 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+script = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 
 shape = SubResource( 19 )
 
-[connection signal="body_entered" from="Area2D" to="." method="lightning"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+
+[connection signal="lightning" from="Area2D" to="." method="lightning"]
 
 
