@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Perimeter.gd" type="Script" id=1]
-[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=2]
-[ext_resource path="res://TestSprite.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BGStudyWood.png" type="Texture" id=2]
+[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=3]
+[ext_resource path="res://BGStudyWallpaper.png" type="Texture" id=4]
+[ext_resource path="res://TestSprite.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -54,7 +56,7 @@ shape = SubResource( 1 )
 position = Vector2( 511.638, 16.592 )
 rotation = 1.5708
 scale = Vector2( 1, 31.9307 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -79,7 +81,7 @@ shape = SubResource( 1 )
 
 position = Vector2( 15.9606, 299.896 )
 scale = Vector2( 1, 16.7509 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -102,7 +104,7 @@ shape = SubResource( 2 )
 
 position = Vector2( 1007.79, 300.594 )
 scale = Vector2( 1, 16.7406 )
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -121,6 +123,6 @@ bounce = 0.0
 
 shape = SubResource( 3 )
 
-[node name="Area2D" parent="." index="4" instance=ExtResource( 3 )]
+[node name="Area2D" parent="." index="4" instance=ExtResource( 5 )]
 
 
