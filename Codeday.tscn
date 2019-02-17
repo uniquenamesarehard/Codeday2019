@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://white.png" type="Texture" id=1]
 [ext_resource path="res://light0.png" type="Texture" id=2]
@@ -8,22 +8,7 @@
 [ext_resource path="res://black.png" type="Texture" id=6]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=7]
 [ext_resource path="res://Trenchcoat img.png" type="Texture" id=8]
-[ext_resource path="res://fog.shader" type="Shader" id=9]
-[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=10]
-
-[sub_resource type="OccluderPolygon2D" id=2]
-
-closed = true
-cull_mode = 0
-polygon = PoolVector2Array( -1050, -750, 1050, -750, 1050, 750, -1050, 750 )
-
-[sub_resource type="ShaderMaterial" id=1]
-
-render_priority = 0
-shader = ExtResource( 9 )
-shader_param/color = null
-shader_param/OCTAVES = null
-_sections_unfolded = [ "shader_param" ]
+[ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=9]
 
 [node name="Codeday" type="Node2D" index="0"]
 
@@ -35,7 +20,7 @@ __meta__ = {
 
 modulate = Color( 0.419235, 0.481391, 0.613281, 1 )
 position = Vector2( 569.002, 278.735 )
-rotation = -3.45489e-11
+rotation = -3.45489e-011
 scale = Vector2( 0.631797, 0.424902 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
@@ -107,7 +92,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black" index="0"]
 
-occluder = SubResource( 2 )
+occluder = null
 light_mask = 1
 
 [node name="black2" type="Sprite" parent="." index="4"]
@@ -121,7 +106,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black2" index="0"]
 
-occluder = SubResource( 2 )
+occluder = null
 light_mask = 1
 
 [node name="black3" type="Sprite" parent="." index="5"]
@@ -135,7 +120,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black3" index="0"]
 
-occluder = SubResource( 2 )
+occluder = null
 light_mask = 1
 __meta__ = {
 "_edit_lock_": true
@@ -153,7 +138,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="black3/Area2D" index="0"]
 
-position = Vector2( -0.000244141, 7.62939e-05 )
+position = Vector2( -0.000244141, 7.62939e-005 )
 scale = Vector2( 1, 1.25 )
 build_mode = 0
 polygon = PoolVector2Array( -1050, -600.001, -1050, 600, 878.573, 600, 878.573, -600.001 )
@@ -177,7 +162,7 @@ rotation_speed = 1.5
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D" index="0"]
 
 position = Vector2( -1.29712, 5.2366 )
-rotation = -5.15244e-11
+rotation = -5.15244e-011
 scale = Vector2( 1.12971, 4.51191 )
 build_mode = 0
 polygon = PoolVector2Array( 0.127045, -5.44672, -12.0122, -10.6648, 12.2578, -10.6657, 12.2748, 10.2084, -11.9952, 10.2094, -12.0122, -10.6648 )
@@ -186,7 +171,7 @@ polygon = PoolVector2Array( 0.127045, -5.44672, -12.0122, -10.6648, 12.2578, -10
 
 modulate = Color( 0.441406, 0.379333, 0.379333, 1 )
 position = Vector2( 1.14813, -1.16061 )
-rotation = 1.23296e-11
+rotation = 1.23296e-011
 scale = Vector2( 0.885183, 0.221636 )
 texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility" ]
@@ -219,7 +204,6 @@ editor_draw_drag_margin = false
 [node name="Fog" type="Sprite" parent="." index="7"]
 
 modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
-material = SubResource( 1 )
 position = Vector2( 586.145, 130.512 )
 rotation = 0.00017551
 scale = Vector2( 0.729445, 0.849416 )
@@ -233,7 +217,7 @@ __meta__ = {
 
 position = Vector2( 44.9942, 55.1203 )
 scale = Vector2( 0.309097, 0.309097 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [connection signal="body_entered" from="black3/Area2D" to="Lightning" method="_on_Area2D_body_entered" flags=6]
 
