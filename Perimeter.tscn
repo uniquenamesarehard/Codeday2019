@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.7086, 16.1388 )
+extents = Vector2( 2.83569, 16.1388 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -96,11 +96,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
+[node name="CollisionShapeL" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
 
 shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="." index="3"]
+[node name="RightWall" type="Sprite" parent="." index="3"]
 
 position = Vector2( 1007.79, 300.594 )
 scale = Vector2( 1, 16.7406 )
@@ -109,7 +109,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -119,10 +119,12 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
+[node name="CollisionShapeR" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
 
 shape = SubResource( 3 )
 
-[node name="Area2D" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Trench" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 121.546, 459.175 )
 
 
