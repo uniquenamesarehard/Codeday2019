@@ -1,22 +1,23 @@
-extends KinematicBody2D
+extends RigidBody2D
+#signal hit
 
-# This is a demo showing how KinematicBody2D
-# move_and_slide works.
-
-# Member 
-export (int) var speed = 300
+# class member variables go here, for example:
+# var a = 2
+# var b = "textvar"
+export (int) var speed = 150
 var screensize = 480*270
-const MOTION_SPEED = 160 # Pixels/second
 
 func _ready():
+	# Called when the node is added to the scene for the first time.
+	# Initialization here
 	screensize = get_viewport_rect().size
+	pass
 
-func _physics_process(delta):
-	var motion = Vector2()
-	if Input.is_action_pressed("move_left"):
-		motion += Vector2(-1, 0)
-	if Input.is_action_pressed("move_right"):
-		motion += Vector2(1, 0)
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
+func _process(delta):
 	var velocity = Vector2() #the player's movement vector
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
@@ -34,7 +35,12 @@ func _physics_process(delta):
 		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
-	motion = motion.normalized() * MOTION_SPEED
 
-	move_and_slide(motion)
 
+func _on_Player_body_entered(body):
+	emit_signal("hit")
+	$CollisionShape2D.disabled = true
+
+func start(pos):
+	position = -pos
+	$CollisionShape2D.disabled = false
