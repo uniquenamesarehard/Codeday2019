@@ -19,12 +19,12 @@ func _input(event):
 		yield(t, "timeout")
 		energy = 0.01
 
-func _on_Area2D_body_entered(body):
-	if body.entered():
+func _on_Area2D_lightning():
 		energy = 5
-	
-
-
-func _on_Area2D_body_exited(body):
-	if body.exited():
+		var t = Timer.new()
+		t.set_wait_time(0.57)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
 		energy = 0.01
