@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Vicki's Test Files/Perimeter.gd" type="Script" id=1]
+[ext_resource path="res://Art Files/BGStudyWood.png" type="Texture" id=2]
+[ext_resource path="res://Art Files/BGEntranceWallPaper.png" type="Texture" id=3]
+[ext_resource path="res://Art Files/BGStudyWallpaper.png" type="Texture" id=4]
+[ext_resource path="res://Vicki's Test Files/TestSprite.tscn" type="PackedScene" id=5]
+
+
+
+
+
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.83569, 16.1388 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 21.9246, 16.0294 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 22.1088, 16.0282 )
+
+[node name="Perimeter" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Floor" type="Sprite" parent="." index="0"]
+
+position = Vector2( 512.746, 583.808 )
+rotation = 1.5708
+scale = Vector2( 1, 31.9307 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
+
+position = Vector2( 1, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Ceiling" type="Sprite" parent="." index="1"]
+
+position = Vector2( 511.638, 16.592 )
+rotation = 1.5708
+scale = Vector2( 1, 31.9307 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ceiling" index="0"]
+
+position = Vector2( 1, 0 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Sprite" parent="." index="2"]
+
+position = Vector2( 15.9606, 299.896 )
+scale = Vector2( 1, 16.7509 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShapeL" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="RightWall" type="Sprite" parent="." index="3"]
+
+position = Vector2( 1007.79, 300.594 )
+scale = Vector2( 1, 16.7406 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShapeR" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="Trench" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 121.546, 459.175 )
+
+

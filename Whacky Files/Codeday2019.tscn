@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=1]
+[ext_resource path="res://light.png" type="Texture" id=2]
+[ext_resource path="res://Lighting and Effects Files/black.png" type="Texture" id=3]
+
+
+
+
+
+
+[node name="Node2D" type="Node2D" index="0"]
+
+position = Vector2( 522.031, 304.563 )
+scale = Vector2( 17.3135, 10.5176 )
+
+[node name="Light2D" type="Light2D" parent="." index="0"]
+
+position = Vector2( 6.8134, -9.87384 )
+scale = Vector2( 0.141498, 0.209045 )
+enabled = true
+editor_only = false
+texture = ExtResource( 1 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Sprite" type="Sprite" parent="Light2D" index="0"]
+
+texture = ExtResource( 2 )
+
+[node name="black" type="Sprite" parent="." index="1"]
+
+position = Vector2( 9.59394, 10.9265 )
+scale = Vector2( 0.0362279, 0.053522 )
+texture = ExtResource( 3 )
+
+
