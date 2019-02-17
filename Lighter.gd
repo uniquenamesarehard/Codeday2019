@@ -1,9 +1,12 @@
 extends KinematicBody2D
 
-export (int) var speed = 200
+# This is a demo showing how KinematicBody2D
+# move_and_slide works.
+
+# Member 
+export (int) var speed = 150
 var screensize = 480*270
-const MOTION_SPEED = 160 # Pixels/second
-var velocity = Vector2()
+const MOTION_SPEED = 150 # Pixels/second
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -34,3 +37,4 @@ func _physics_process(delta):
 	motion = motion.normalized() * MOTION_SPEED
 
 	move_and_slide(motion)
+
