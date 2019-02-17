@@ -1,4 +1,5 @@
 extends Node
+var screensize = 320*160
 
 func L():
-	pass # replace with function body
+	screensize = get_viewport_rect().size
