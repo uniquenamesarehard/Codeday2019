@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Passage3 Files/Light2D.gd" type="Script" id=1]
+[ext_resource path="res://Lighter.gd" type="Script" id=1]
 [ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-1.png" type="Texture" id=2]
 [ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-2.png" type="Texture" id=3]
 [ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-3.png" type="Texture" id=4]
 [ext_resource path="res://Art Files/Character Art/Trenchcoat Lighter Walk-4.png" type="Texture" id=5]
 [ext_resource path="res://Passage3 Files/Area2D.gd" type="Script" id=6]
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=7]
+[ext_resource path="res://Passage3 Files/Light2D.gd" type="Script" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -36,13 +37,14 @@ _sections_unfolded = [ "Material", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
+speed = 150
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( -2.55267, -0.860474 )
 frames = SubResource( 1 )
 animation = "right"
-frame = 3
+frame = 1
 playing = true
 _sections_unfolded = [ "Material" ]
 
@@ -91,7 +93,7 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
-script = ExtResource( 1 )
+script = ExtResource( 8 )
 _sections_unfolded = [ "Material", "Visibility" ]
 
 

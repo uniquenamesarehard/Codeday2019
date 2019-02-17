@@ -16,6 +16,5 @@ func _ready():
 #	pass
 
 func _on_Area2D_body_entered(body):
-	hide()
 	if Input.is_action_pressed("ui_select"):
 		emit_signal("respond", text)

@@ -1,5 +1,5 @@
 extends CanvasLayer
-
+signal new_text
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -38,4 +38,5 @@ func _on_closeButton_pressed():
 	
 func interactable(text):
 	$Panel/ExamineText.dialog = text
-	pass # replace with function body
+	$Panel/ExamineText.page = 0
+	$Panel/ExamineText.set_visible_characters(0)
