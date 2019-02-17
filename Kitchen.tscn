@@ -9,7 +9,7 @@
 [ext_resource path="res://KitchenCabinetMid.png" type="Texture" id=7]
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=8]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 0, 30 )
 
