@@ -8,13 +8,13 @@
 [ext_resource path="res://fog.shader" type="Shader" id=6]
 [ext_resource path="res://BGEntranceWallPaper.png" type="Texture" id=7]
 
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=1]
 
 closed = true
 cull_mode = 0
 polygon = PoolVector2Array( -1050, -750, 1050, -750, 1050, 750, -1050, 750 )
 
-[sub_resource type="ShaderMaterial" id=1]
+[sub_resource type="ShaderMaterial" id=2]
 
 render_priority = 0
 shader = ExtResource( 6 )
@@ -22,7 +22,7 @@ shader_param/color = null
 shader_param/OCTAVES = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="Codeday" type="Node2D" index="0"]
+[node name="Codeday" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true
@@ -32,7 +32,7 @@ __meta__ = {
 
 modulate = Color( 0.419235, 0.481391, 0.613281, 1 )
 position = Vector2( 570, 280 )
-rotation = -3.45489e-11
+rotation = -3.45489e-011
 scale = Vector2( 0.631797, 0.424902 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material", "Visibility" ]
@@ -76,7 +76,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black" index="0"]
 
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 light_mask = 1
 
 [node name="black2" type="Sprite" parent="." index="3"]
@@ -90,7 +90,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black2" index="0"]
 
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 light_mask = 1
 
 [node name="black3" type="Sprite" parent="." index="4"]
@@ -104,7 +104,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="black3" index="0"]
 
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 light_mask = 1
 __meta__ = {
 "_edit_lock_": true
@@ -122,7 +122,7 @@ _sections_unfolded = [ "Visibility" ]
 [node name="white2" type="Sprite" parent="." index="6"]
 
 modulate = Color( 0.168335, 0.360906, 0.769531, 1 )
-material = SubResource( 1 )
+material = SubResource( 2 )
 position = Vector2( 586.145, 130.512 )
 rotation = 0.00017551
 scale = Vector2( 0.729445, 0.849416 )
