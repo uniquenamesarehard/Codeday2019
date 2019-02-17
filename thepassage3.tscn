@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://Windowlit.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://BGLibrary.png" type="Texture" id=4]
 [ext_resource path="res://BGPassage3.png" type="Texture" id=5]
 [ext_resource path="res://Passage3 Files/Lighter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=7]
+[ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,10 +24,50 @@ extents = Vector2( 49.0993, 15.5709 )
 custom_solver_bias = 0.0
 extents = Vector2( 62.5342, 16.0347 )
 
+[sub_resource type="ParticlesMaterial" id=4]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, -98, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+color = Color( 1, 1, 1, 1 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Gravity" ]
+
 [node name="Node2D" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
+modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
 mode = 0
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -43,7 +85,7 @@ collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 851968, 7, 0, 851969, 7, 0, 851970, 7, 0, 851971, 7, 0, 851972, 7, 0, 851973, 7, 0, 851974, 7, 0, 851975, 7, 0, 851976, 7, 0, 851977, 7, 0, 917504, 7, 0, 917505, 7, 0, 917506, 7, 0, 917507, 7, 0, 917510, 7, 0, 917511, 7, 0, 917512, 7, 0, 917513, 7, 0, 983040, 7, 0, 983041, 7, 0, 983042, 7, 0, 983043, 7, 0, 983046, 7, 0, 983047, 7, 0, 983048, 7, 0, 983049, 7, 0, 1048576, 7, 0, 1048577, 7, 0, 1048578, 7, 0, 1048579, 7, 0, 1048582, 7, 0, 1048583, 7, 0, 1048584, 7, 0, 1048585, 7, 0, 1114112, 7, 0, 1114113, 7, 0, 1114114, 7, 0, 1114115, 7, 0, 1114116, 7, 0, 1114117, 7, 0, 1114118, 7, 0, 1114119, 7, 0, 1114120, 7, 0, 1114121, 7, 0 )
-_sections_unfolded = [ "Cell" ]
+_sections_unfolded = [ "Cell", "Visibility" ]
 
 [node name="window" type="Sprite" parent="." index="1"]
 
@@ -64,7 +106,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="candle2" type="Sprite" parent="." index="3"]
 
-position = Vector2( 234, 462 )
+position = Vector2( 234.462, 464.772 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
@@ -148,5 +190,107 @@ shape = SubResource( 3 )
 [node name="Lighter" parent="." index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 29.592, 531.836 )
+
+[node name="Light2D" type="Light2D" parent="." index="8"]
+
+position = Vector2( 81.6823, 464.287 )
+scale = Vector2( 0.286096, 0.286096 )
+enabled = true
+editor_only = false
+texture = ExtResource( 7 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.4
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Particles2D" type="Particles2D" parent="Light2D" index="0"]
+
+modulate = Color( 0.368627, 0.356863, 0.203922, 1 )
+position = Vector2( 1.32419, 1.67212 )
+scale = Vector2( 0.268791, 0.516983 )
+emitting = true
+amount = 5
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 8 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Visibility" ]
+
+[node name="Light2D2" type="Light2D" parent="." index="9"]
+
+position = Vector2( 241.682, 463.944 )
+scale = Vector2( 0.286096, 0.286096 )
+enabled = true
+editor_only = false
+texture = ExtResource( 7 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.4
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Particles2D2" type="Particles2D" parent="Light2D2" index="0"]
+
+modulate = Color( 0.368627, 0.356863, 0.203922, 1 )
+position = Vector2( 2.93896, 3.48108 )
+scale = Vector2( 0.268791, 0.516983 )
+emitting = true
+amount = 5
+lifetime = 1.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 8 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Visibility" ]
 
 
