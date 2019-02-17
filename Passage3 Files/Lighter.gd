@@ -34,7 +34,7 @@ func _physics_process(delta):
 		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
-	motion = motion.normalized() * MOTION_SPEED
+	motion = (motion.normalized() * MOTION_SPEED)
 
 	move_and_slide(motion)
 
