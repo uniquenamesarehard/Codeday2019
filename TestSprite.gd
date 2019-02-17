@@ -4,7 +4,7 @@ extends Area2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-export (int) var speed = 200
+export (int) var speed = 150
 var screensize = 480*270
 
 func _ready():
@@ -19,9 +19,9 @@ func _ready():
 #	pass
 func _process(delta):
 	var velocity = Vector2() #the player's movement vector
-	if Input.is_action_pressed("ui_left"):
-		velocity.x += 1
 	if Input.is_action_pressed("ui_right"):
+		velocity.x += 1
+	if Input.is_action_pressed("ui_left"):
 		velocity.x -= 1
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -32,7 +32,7 @@ func _process(delta):
 	position.x = clamp(position.x, 0, screensize.x)
 	position.y = clamp(position.y, 0, screensize.y)
 	if velocity.x != 0:
-		$AnimatedSprite.animation = "left"
+		$AnimatedSprite.animation = "right"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
 
