@@ -10,7 +10,9 @@
 
 [node name="Area2D" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 694, 332 )
+position = Vector2( 693, 307 )
+scale = Vector2( 2, 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Lighter" parent="." index="2" instance=ExtResource( 3 )]
 
