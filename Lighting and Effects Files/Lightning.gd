@@ -19,7 +19,7 @@ func _input(event):
 		yield(t, "timeout")
 		energy = 0.01
 
-func _on_Area2D_L():
+func L():
 	energy = 5
 	var t = Timer.new()
 	t.set_wait_time(0.75)
