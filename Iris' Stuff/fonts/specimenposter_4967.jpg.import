@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blueprint.jpg-a6d40d483bdd33a0d257e057ce24efb6.stex"
+path="res://.import/specimenposter_4967.jpg-73fd435a3c31470199f0836dd97b4bf2.stex"
 
 [deps]
 
-source_file="res://Iris' Assets/Blueprint.jpg"
-dest_files=[ "res://.import/Blueprint.jpg-a6d40d483bdd33a0d257e057ce24efb6.stex" ]
+source_file="res://Iris' Stuff/fonts/specimenposter_4967.jpg"
+dest_files=[ "res://.import/specimenposter_4967.jpg-73fd435a3c31470199f0836dd97b4bf2.stex" ]
 
 [params]
 
