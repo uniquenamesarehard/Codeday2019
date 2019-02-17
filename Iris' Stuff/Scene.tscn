@@ -21,6 +21,8 @@ speed = 85
 
 [node name="HUD" parent="." index="2" instance=ExtResource( 3 )]
 
+layer = 1
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
 
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_Area2D_body_exited"]

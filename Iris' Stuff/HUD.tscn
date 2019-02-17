@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Iris' Stuff/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Iris' Stuff/fonts/Quicksand-Bold.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://Iris' Stuff/fonts/Quicksand-Regular.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://Iris' Stuff/ExamineText.gd" type="Script" id=4]
-[ext_resource path="res://Iris' Stuff/assets/Blueprint.jpg" type="Texture" id=5]
+[ext_resource path="res://Blueprint Fl1.png" type="Texture" id=5]
+[ext_resource path="res://Blueprint Fl2.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -94,11 +95,11 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 870.0
-margin_top = 20.0
-margin_right = 2182.0
-margin_bottom = 856.0
-rect_scale = Vector2( 0.1, 0.1 )
+margin_left = 886.0
+margin_top = -48.0
+margin_right = 2198.0
+margin_bottom = 788.0
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -118,7 +119,6 @@ _sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Blueprint" type="Container" parent="." index="2"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -151,12 +151,19 @@ _sections_unfolded = [ "Material", "Visibility", "custom_styles" ]
 
 [node name="BlueprintImg" type="Sprite" parent="Blueprint" index="1"]
 
-position = Vector2( 521.15, 301.736 )
-scale = Vector2( 0.466478, 0.491432 )
+position = Vector2( 280, 290 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Visibility" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="closeButton" type="Button" parent="Blueprint" index="2"]
+[node name="BlueprintImg2" type="Sprite" parent="Blueprint" index="2"]
+
+position = Vector2( 750, 290 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="closeButton" type="Button" parent="Blueprint" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0

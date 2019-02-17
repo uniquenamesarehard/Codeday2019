@@ -10,6 +10,7 @@ func _ready():
 	blueprint_menu = get_node("Blueprint")
 	$Panel.show()
 	$MenuButton.show()
+	blueprint_menu.hide()
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
