@@ -247,6 +247,4 @@ scale = Vector2( 0.309097, 0.309097 )
 
 [connection signal="body_entered" from="black3/Area2D" to="Lightning" method="_on_Area2D_body_entered" flags=6]
 
-[connection signal="lightning" from="black3/Area2D" to="Lightning" method="_on_Area2D_lightning" flags=6]
-
 

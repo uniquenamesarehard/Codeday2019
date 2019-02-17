@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://BG.tres" type="TileSet" id=1]
+[ext_resource path="res://candle.png" type="Texture" id=2]
+[ext_resource path="res://Door.png" type="Texture" id=3]
+[ext_resource path="res://BGBasement.png" type="Texture" id=4]
+[ext_resource path="res://BGBasementStone.png" type="Texture" id=5]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 1.15125 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.5386, 15.8178 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 29.8608, 29.4838 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Candle" type="Sprite" parent="." index="1"]
+
+position = Vector2( 30, 494 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 8, 6, 16, 25 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Candle2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 187, 494 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 8, 6, 16, 25 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Candle3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 344, 495 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 8, 6, 16, 25 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Door Laundry Room" type="Sprite" parent="." index="4"]
+
+position = Vector2( 73, 439 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Door PowerRoom" type="Sprite" parent="." index="5"]
+
+position = Vector2( 246, 439 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Floor" type="Sprite" parent="." index="6"]
+
+position = Vector2( 192.535, 573.006 )
+scale = Vector2( 12.024, 0.411986 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Sprite" parent="." index="7"]
+
+position = Vector2( -0.0762291, 491.077 )
+scale = Vector2( 0.169805, 4.70792 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="RightWall" type="Sprite" parent="." index="8"]
+
+position = Vector2( 383.329, 491.373 )
+scale = Vector2( 0.172659, 4.6921 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall" index="0"]
+
+position = Vector2( 6.18176, -0.00818443 )
+scale = Vector2( 1, 0.506782 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
+
+position = Vector2( 0, 1.76225 )
+scale = Vector2( 1, 1.12853 )
+shape = SubResource( 3 )
+
+[node name="Lighter" parent="." index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 25.5132, 522.541 )
+
+
