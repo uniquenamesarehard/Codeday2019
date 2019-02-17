@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://Railing To Basement.png" type="Texture" id=2]
 [ext_resource path="res://DumbWaiter.png" type="Texture" id=3]
 [ext_resource path="res://candle.png" type="Texture" id=4]
+[ext_resource path="res://BGPassage3.png" type="Texture" id=5]
+[ext_resource path="res://BGPassage1.png" type="Texture" id=6]
+[ext_resource path="res://Dumbwaiter.png" type="Texture" id=7]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 15.8759 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 20.0251, 16.0009 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 78.9533 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -60,5 +79,82 @@ texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 8, 6, 16, 25 )
+
+[node name="Floor" type="Sprite" parent="." index="5"]
+
+position = Vector2( 159.587, 446.489 )
+rotation = 1.5708
+scale = Vector2( 0.429145, 10.0776 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="Sprite" parent="." index="6"]
+
+position = Vector2( 1.97334, 365.003 )
+scale = Vector2( 0.27727, 4.79949 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LeftWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="RightWall" type="Sprite" parent="." index="7"]
+
+position = Vector2( 301.531, 366.818 )
+scale = Vector2( 1.16879, 1 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RightWall" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall/StaticBody2D" index="0"]
+
+position = Vector2( 9.15781, 0 )
+scale = Vector2( 0.518009, 1 )
+shape = SubResource( 3 )
+
+[node name="Lighter" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 28.7402, 390.815 )
 
 
