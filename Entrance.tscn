@@ -1,9 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://Door.png" type="Texture" id=2]
 [ext_resource path="res://staircase.png" type="Texture" id=3]
 [ext_resource path="res://WallSconce.png" type="Texture" id=4]
+[ext_resource path="res://BGPassage1.png" type="Texture" id=5]
+[ext_resource path="res://BGEntranceWallPaper-Wood.png" type="Texture" id=6]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.78381, 15.9595 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 33.8819, 16.256 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 38.4006, 15.9676 )
 
 [node name="Node2D" type="Node2D" index="0"]
 
@@ -79,5 +97,80 @@ texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="Floor" type="Sprite" parent="." index="7"]
+
+position = Vector2( 319.572, 413.895 )
+rotation = 1.5708
+scale = Vector2( 0.253901, 19.9834 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="." index="8"]
+
+position = Vector2( -0.469643, 336.052 )
+scale = Vector2( 0.220522, 5.05519 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="." index="9"]
+
+position = Vector2( 644.337, 336.084 )
+scale = Vector2( 0.202205, 5.01983 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite3/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="Lighter" parent="." index="10" instance=ExtResource( 7 )]
+
+position = Vector2( 147.431, 359.571 )
 
 
