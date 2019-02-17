@@ -1,0 +1,262 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://BG.tres" type="TileSet" id=1]
+[ext_resource path="res://Door.png" type="Texture" id=2]
+[ext_resource path="res://KitchenCabinetTop.png" type="Texture" id=3]
+[ext_resource path="res://WallSconce.png" type="Texture" id=4]
+[ext_resource path="res://KitchenCabinetTopBroken.png" type="Texture" id=5]
+[ext_resource path="res://KitchenCabinetEnd.png" type="Texture" id=6]
+[ext_resource path="res://KitchenCabinetMid.png" type="Texture" id=7]
+[ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D"]
+
+position = Vector2( 0, 30 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+editor/display_folded = true
+position = Vector2( 0, -1 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 851968, 8, 0, 851969, 8, 0, 851970, 8, 0, 851971, 8, 0, 851972, 8, 0, 851973, 8, 0, 851974, 8, 0, 851975, 8, 0, 851976, 8, 0, 851977, 8, 0, 851978, 8, 0, 851979, 8, 0, 851980, 8, 0, 851981, 8, 0, 917504, 8, 0, 917505, 8, 0, 917506, 8, 0, 917507, 8, 0, 917508, 8, 0, 917509, 8, 0, 917510, 8, 0, 917511, 8, 0, 917512, 8, 0, 917513, 8, 0, 917514, 8, 0, 917515, 8, 0, 917516, 8, 0, 917517, 8, 0, 983040, 8, 0, 983041, 8, 0, 983042, 8, 0, 983043, 8, 0, 983044, 8, 0, 983045, 8, 0, 983046, 8, 0, 983047, 8, 0, 983048, 8, 0, 983049, 8, 0, 983050, 8, 0, 983051, 8, 0, 983052, 8, 0, 983053, 8, 0, 1048576, 8, 0, 1048577, 8, 0, 1048578, 8, 0, 1048579, 8, 0, 1048580, 8, 0, 1048581, 8, 0, 1048582, 8, 0, 1048583, 8, 0, 1048584, 8, 0, 1048585, 8, 0, 1048586, 8, 0, 1048587, 8, 0, 1048588, 8, 0, 1048589, 8, 0, 1114112, 8, 0, 1114113, 8, 0, 1114114, 8, 0, 1114115, 8, 0, 1114116, 8, 0, 1114117, 8, 0, 1114118, 8, 0, 1114119, 8, 0, 1114120, 8, 0, 1114121, 8, 0, 1114122, 8, 0, 1114123, 8, 0, 1114124, 8, 0, 1114125, 8, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Door" type="Sprite" parent="TileMap" index="0"]
+
+position = Vector2( 98, 441 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 128 )
+_sections_unfolded = [ "Offset", "Region" ]
+
+[node name="Cabinet" type="Sprite" parent="TileMap" index="1"]
+
+position = Vector2( 212, 421 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Cabinet2" type="Sprite" parent="TileMap" index="2"]
+
+position = Vector2( 244, 421 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Cabinet3" type="Sprite" parent="TileMap" index="3"]
+
+position = Vector2( 340, 421 )
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Light" type="Sprite" parent="TileMap" index="4"]
+
+position = Vector2( 170, 441 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Light2" type="Sprite" parent="TileMap" index="5"]
+
+position = Vector2( 60, 441 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CabinetBroken" type="Sprite" parent="TileMap" index="6"]
+
+position = Vector2( 276, 421 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CabinetBroken3" type="Sprite" parent="TileMap" index="7"]
+
+position = Vector2( 372, 421 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CabinetBroken4" type="Sprite" parent="TileMap" index="8"]
+
+position = Vector2( 404, 421 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CabinetBroken2" type="Sprite" parent="TileMap" index="9"]
+
+position = Vector2( 308, 421 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CounterEnd" type="Sprite" parent="TileMap" index="10"]
+
+position = Vector2( 179, 506 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter" type="Sprite" parent="TileMap" index="11"]
+
+position = Vector2( 211, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter7" type="Sprite" parent="TileMap" index="12"]
+
+position = Vector2( 308, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter2" type="Sprite" parent="TileMap" index="13"]
+
+position = Vector2( 243, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter6" type="Sprite" parent="TileMap" index="14"]
+
+position = Vector2( 340, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter3" type="Sprite" parent="TileMap" index="15"]
+
+position = Vector2( 275, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter5" type="Sprite" parent="TileMap" index="16"]
+
+position = Vector2( 372, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter4" type="Sprite" parent="TileMap" index="17"]
+
+position = Vector2( 307, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Counter8" type="Sprite" parent="TileMap" index="18"]
+
+position = Vector2( 404, 506 )
+texture = ExtResource( 7 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Light2D" type="Light2D" parent="." index="1"]
+
+position = Vector2( 70, 460 )
+scale = Vector2( 0.195187, 0.195187 )
+enabled = true
+editor_only = false
+texture = ExtResource( 8 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.85
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="Light2D2" type="Light2D" parent="." index="2"]
+
+position = Vector2( 190, 460 )
+scale = Vector2( 0.195187, 0.195187 )
+enabled = true
+editor_only = false
+texture = ExtResource( 8 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 0.85
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+
