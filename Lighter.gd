@@ -7,6 +7,7 @@ extends KinematicBody2D
 export (int) var speed = 85
 var screensize = 480*270
 const MOTION_SPEED = 150 # Pixels/second
+var pos = Vector2(0, 10)
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -38,5 +39,6 @@ func _physics_process(delta):
 
 	move_and_slide(motion)
 
-
+func p():
+	$Lighter.position = pos
 

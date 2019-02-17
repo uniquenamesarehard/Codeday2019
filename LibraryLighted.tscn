@@ -21,7 +21,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 1.53345, 16.0356 )
+extents = Vector2( 22.8293, 1.82552 )
 
 [sub_resource type="RectangleShape2D" id=4]
 
@@ -43,7 +43,7 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 6.51538, 80.0728 )
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="TileMap" type="TileMap"]
 
 position = Vector2( 0, 30 )
 mode = 0
@@ -72,7 +72,6 @@ __meta__ = {
 
 [node name="Floor" type="Sprite" parent="Node2D" index="0"]
 
-editor/display_folded = true
 position = Vector2( 336.234, 578.697 )
 rotation = 1.5708
 scale = Vector2( 0.59289, 21.1106 )
@@ -94,7 +93,11 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Floor/StaticBody2D" index="0"]
 
+position = Vector2( 16.824, 0.940669 )
+rotation = 1.54073
+scale = Vector2( 0.650985, 6.86732 )
 shape = SubResource( 1 )
+one_way_collision = true
 
 [node name="Sprite" type="Sprite" parent="Node2D" index="1"]
 
@@ -233,7 +236,7 @@ disabled = true
 
 [node name="Area2D" type="Area2D" parent="Node2D/LeftWall/StaticBody2D" index="1"]
 
-position = Vector2( -364.729, -169.74 )
+position = Vector2( -3.31347, 15.701 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -245,7 +248,7 @@ script = ExtResource( 14 )
 
 [node name="Lighter" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="0" instance=ExtResource( 15 )]
 
-position = Vector2( 415.275, 40.3734 )
+position = Vector2( 94.9614, 190.678 )
 scale = Vector2( 1.45216, 1 )
 _sections_unfolded = [ "Collision", "Material", "Visibility" ]
 
