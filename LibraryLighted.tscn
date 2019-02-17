@@ -245,7 +245,7 @@ script = ExtResource( 14 )
 
 [node name="Lighter" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="0" instance=ExtResource( 15 )]
 
-position = Vector2( 415.275, 45.2535 )
+position = Vector2( 415.275, 40.3734 )
 scale = Vector2( 1.45216, 1 )
 _sections_unfolded = [ "Collision", "Material", "Visibility" ]
 
