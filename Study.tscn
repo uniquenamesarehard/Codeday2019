@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://BGPassage1.png" type="Texture" id=12]
 [ext_resource path="res://Lighting and Effects Files/spot.png" type="Texture" id=13]
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=14]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -41,7 +42,7 @@ closed = true
 cull_mode = 0
 polygon = PoolVector2Array( 47.8036, 48.2009, 47.8036, 207.363, 56.6667, 226.667, 56.6667, 198.333, 56.6667, 28.3334 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 10, 60 )
 
@@ -299,5 +300,9 @@ position = Vector2( 240, 480 )
 scale = Vector2( 0.352941, 0.352941 )
 occluder = SubResource( 5 )
 light_mask = 1
+
+[node name="Lighter" parent="." index="16" instance=ExtResource( 15 )]
+
+position = Vector2( 35.4144, 491.415 )
 
 
