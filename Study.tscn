@@ -304,5 +304,6 @@ light_mask = 1
 [node name="Lighter" parent="." index="16" instance=ExtResource( 15 )]
 
 position = Vector2( 35.4144, 491.415 )
+speed = 85
 
 
