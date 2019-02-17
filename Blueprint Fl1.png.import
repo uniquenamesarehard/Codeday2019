@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dumbwaiter.png-d906189b1ee2467f5a5dcbeb36e75c80.stex"
+path="res://.import/Blueprint Fl1.png-f973d4311b3c29dad00c3b10d606193d.stex"
 
 [deps]
 
-source_file="res://Dumbwaiter.png"
-dest_files=[ "res://.import/Dumbwaiter.png-d906189b1ee2467f5a5dcbeb36e75c80.stex" ]
+source_file="res://Blueprint Fl1.png"
+dest_files=[ "res://.import/Blueprint Fl1.png-f973d4311b3c29dad00c3b10d606193d.stex" ]
 
 [params]
 
