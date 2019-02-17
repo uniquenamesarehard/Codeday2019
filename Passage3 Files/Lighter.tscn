@@ -23,7 +23,7 @@ custom_solver_bias = 0.0
 radius = 19.5842
 height = 56.1251
 
-[node name="Lighter" type="KinematicBody2D" index="0"]
+[node name="Lighter" type="KinematicBody2D"]
 
 modulate = Color( 0.445312, 0.445312, 0.445312, 1 )
 position = Vector2( 180, 180 )
@@ -42,7 +42,7 @@ __meta__ = {
 position = Vector2( -2.55267, -0.860474 )
 frames = SubResource( 1 )
 animation = "right"
-frame = 2
+frame = 3
 playing = true
 _sections_unfolded = [ "Material" ]
 
