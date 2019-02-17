@@ -1688,6 +1688,7 @@ shape = SubResource( 17 )
 
 position = Vector2( 34.9485, 541.398 )
 scale = Vector2( 1.09375, 1.09375 )
+speed = 85
 
 [node name="white" type="Sprite" parent="." index="6"]
 

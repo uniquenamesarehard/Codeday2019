@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://BG.tres" type="TileSet" id=1]
 [ext_resource path="res://BGPassage3.png" type="Texture" id=2]
@@ -11,7 +11,8 @@
 [ext_resource path="res://SecretDoorBookShelfWall.png" type="Texture" id=9]
 [ext_resource path="res://BookshelfSecretDoor.png" type="Texture" id=10]
 [ext_resource path="res://Lighting and Effects Files/light0.png" type="Texture" id=11]
-[ext_resource path="res://Lighter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Study Key.png" type="Texture" id=12]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -316,8 +317,15 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 
-[node name="Lighter" parent="." index="6" instance=ExtResource( 12 )]
+[node name="Study Key" type="Sprite" parent="." index="6"]
 
+position = Vector2( 71, 489 )
+scale = Vector2( 4.875, 4.875 )
+texture = ExtResource( 12 )
+
+[node name="Lighter" parent="." index="7" instance=ExtResource( 13 )]
+
+visible = false
 position = Vector2( 40, 530 )
 
 

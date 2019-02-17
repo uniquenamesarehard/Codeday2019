@@ -251,14 +251,13 @@ _sections_unfolded = [ "Emission Shape", "Gravity" ]
 
 render_priority = 0
 trail_divisor = 1
-emission_shape = 2
-emission_box_extents = Vector3( 1, 1, 1 )
+emission_shape = 0
 flag_align_y = false
 flag_rotate_y = false
 flag_disable_z = true
 spread = 45.0
 flatness = 0.0
-gravity = Vector3( 0, 200, 0 )
+gravity = Vector3( 0, 98, 0 )
 initial_velocity = 1.0
 initial_velocity_random = 0.0
 angular_velocity = 0.0
@@ -467,11 +466,11 @@ _sections_unfolded = [ "Process Material", "Transform", "Visibility" ]
 
 [node name="Particles2D7" type="Particles2D" parent="window" index="6"]
 
-modulate = Color( 0.742188, 0.742188, 0.742188, 1 )
+modulate = Color( 0.671875, 0.671875, 0.671875, 1 )
 show_behind_parent = true
 position = Vector2( 14.3346, 47.2654 )
 emitting = true
-amount = 15
+amount = 8
 lifetime = 1.0
 one_shot = false
 preprocess = 0.0
@@ -603,5 +602,6 @@ shape = SubResource( 9 )
 [node name="Lighter" parent="." index="7" instance=ExtResource( 6 )]
 
 position = Vector2( 29.592, 531.372 )
+speed = 85
 
 
