@@ -258,6 +258,7 @@ scale = Vector2( 1.45216, 1 )
 
 position = Vector2( 404.915, 40.26 )
 scale = Vector2( 1.45216, 1 )
+speed = 85
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/LeftWall/StaticBody2D/Area2D" index="3"]
 
@@ -397,8 +398,8 @@ shadow_item_cull_mask = 1
 
 [connection signal="body_entered" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D" method="_on_Area2D_body_entered"]
 
-[connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Position2D" method="p"]
-
 [connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Lighter" method="p"]
+
+[connection signal="p" from="Node2D/LeftWall/StaticBody2D/Area2D" to="Node2D/LeftWall/StaticBody2D/Area2D/Position2D" method="p"]
 
 
