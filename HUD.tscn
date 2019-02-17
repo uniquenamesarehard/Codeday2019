@@ -104,7 +104,7 @@ icon = ExtResource( 3 )
 flat = true
 align = 1
 items = [  ]
-_sections_unfolded = [ "Margin", "Rect" ]
+_sections_unfolded = [ "Margin", "Rect", "Visibility" ]
 
 [node name="Blueprint" type="Container" parent="." index="3"]
 
