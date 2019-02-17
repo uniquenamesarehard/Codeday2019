@@ -13,8 +13,8 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
 	#if Input.is_action_pressed("ui_select"): #and object is interactable
 		#$ExamineText.text = text
 	#	$Panel/ExamineText.text = "Today is February 16, 2019. This is the day we build a game"
@@ -37,6 +37,6 @@ func _on_closeButton_pressed():
 	blueprint_menu.hide()
 	
 func interactable(text):
+	$Panel/ExamineText.set_visible_characters(0)
 	$Panel/ExamineText.dialog = text
 	$Panel/ExamineText.page = 0
-	$Panel/ExamineText.set_visible_characters(0)

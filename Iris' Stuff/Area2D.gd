@@ -3,7 +3,7 @@ signal respond(text)
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var text = ["What child? Take a look around, there is no one here but you and I.", "Oh, I get it. You want to play a little hero fantasy. Are you sure that’s not simply what you wanted to see?"]
+var text = ["What child? Take a look around, there is no one here but you and I.", "Oh, I get it. You want to play a little hero fantasy. Are you sure that’s not simply what you wanted to see?", "Yo"]
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
