@@ -15,7 +15,7 @@ extents = Vector2( 2.78381, 15.9595 )
 [sub_resource type="SegmentShape2D" id=2]
 
 custom_solver_bias = 0.0
-a = Vector2( -684.895, -9.02886 )
+a = Vector2( -634.647, -4.68047 )
 b = Vector2( 24.047, 7.48481 )
 
 [sub_resource type="RectangleShape2D" id=3]
