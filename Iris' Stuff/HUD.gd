@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node2D
 #signal new_text
 # class member variables go here, for example:
 # var a = 2
