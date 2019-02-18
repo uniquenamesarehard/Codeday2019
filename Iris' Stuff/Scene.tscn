@@ -4,7 +4,6 @@
 [ext_resource path="res://Lighter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Iris' Stuff/HUD.tscn" type="PackedScene" id=3]
 
-
 [node name="Node" type="Node" index="0"]
 
 [node name="Area2D" parent="." index="0" instance=ExtResource( 1 )]
@@ -18,7 +17,6 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 182, 278 )
 scale = Vector2( 2, 2 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
-speed = 85
 
 [node name="HUD" parent="." index="2" instance=ExtResource( 3 )]
 
