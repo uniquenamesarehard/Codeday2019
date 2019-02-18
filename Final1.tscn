@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://LibraryStage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Study.tscn" type="PackedScene" id=2]
+[ext_resource path="res://thepassage3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Kitchen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Blueprint Fl1.png" type="Texture" id=5]
+[ext_resource path="res://Blueprint Fl2.png" type="Texture" id=6]
+[ext_resource path="res://Lighting and Effects Files/fog.shader" type="Shader" id=7]
+[ext_resource path="res://Lighting and Effects Files/white.png" type="Texture" id=8]
+[ext_resource path="res://Lighter.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+render_priority = 0
+shader = ExtResource( 7 )
+shader_param/color = null
+shader_param/OCTAVES = null
+
+[node name="Node2D" index="0" instance=ExtResource( 1 )]
+
+position = Vector2( -0.39624, -278.513 )
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 676.609, 58.3859 )
+
+[node name="Node2D" parent="Node2D" index="15" instance=ExtResource( 3 )]
+
+position = Vector2( -676.213, -189.873 )
+
+[node name="Node2D" parent="Node2D/Node2D" index="9" instance=ExtResource( 4 )]
+
+position = Vector2( 580, 0 )
+
+[node name="TileMap" parent="." index="1"]
+
+tile_data = PoolIntArray( 393246, 0, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 6, 0, 851987, 4, 0, 851988, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 983040, 6, 0, 983041, 6, 0, 983042, 6, 0, 983043, 6, 0, 983044, 6, 0, 983045, 6, 0, 983046, 6, 0, 983047, 6, 0, 983048, 6, 0, 983049, 6, 0, 983050, 6, 0, 983051, 6, 0, 983052, 6, 0, 983053, 6, 0, 983054, 6, 0, 983055, 6, 0, 983056, 6, 0, 983057, 6, 0, 983058, 6, 0, 983059, 6, 0, 983060, 6, 0, 1048576, 11, 0, 1048577, 11, 0, 1048578, 11, 0, 1048579, 11, 0, 1048580, 11, 0, 1048581, 11, 0, 1048582, 11, 0, 1048583, 11, 0, 1048584, 11, 0, 1048585, 11, 0, 1048586, 11, 0, 1048587, 11, 0, 1048588, 11, 0, 1048589, 11, 0, 1048590, 11, 0, 1048591, 11, 0, 1048592, 11, 0, 1048593, 11, 0, 1048594, 11, 0, 1048595, 11, 0, 1048596, 11, 0, 1114112, 11, 0, 1114113, 11, 0, 1114114, 11, 0, 1114115, 11, 0, 1114116, 11, 0, 1114117, 11, 0, 1114118, 11, 0, 1114119, 11, 0, 1114120, 11, 0, 1114121, 536870923, 0, 1114122, 11, 0, 1114123, 11, 0, 1114124, 11, 0, 1114125, 11, 0, 1114126, 11, 0, 1114127, 11, 0, 1114128, 11, 0, 1114129, 11, 0, 1114130, 11, 0, 1114131, 11, 0, 1114132, 11, 0 )
+
+[node name="Blueprint Fl1" type="Sprite" parent="." index="2"]
+
+position = Vector2( 160.396, 728.513 )
+texture = ExtResource( 5 )
+
+[node name="Blueprint Fl2" type="Sprite" parent="." index="3"]
+
+position = Vector2( 470.396, 728.513 )
+texture = ExtResource( 6 )
+
+[node name="white" type="Sprite" parent="." index="4"]
+
+material = SubResource( 1 )
+position = Vector2( 510, 470 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Lighter" parent="." index="5" instance=ExtResource( 9 )]
+
+
