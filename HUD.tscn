@@ -1,0 +1,174 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Iris' Assets/fonts/Quicksand-Regular.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Settings" ]
+
+[node name="HUD" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1022.0
+margin_bottom = 605.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0133514, 0.37697, 0.488281, 1 )
+
+[node name="Panel" type="Panel" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 54.0
+margin_top = 373.0
+margin_right = 843.0
+margin_bottom = 562.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ExamineText" type="Label" parent="Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 23.0
+margin_top = 32.0
+margin_right = 765.0
+margin_bottom = 162.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="MenuButton" type="MenuButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 865.0
+margin_top = 22.0
+margin_right = 2177.0
+margin_bottom = 858.0
+rect_scale = Vector2( 0.1, 0.1 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+flat = true
+align = 1
+items = [  ]
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Blueprint" type="Container" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Material", "Popup", "Rect", "Visibility" ]
+
+[node name="Panel" type="Panel" parent="Blueprint" index="0"]
+
+modulate = Color( 1, 1, 1, 0.7 )
+self_modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1025.0
+margin_bottom = 603.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Material", "Visibility", "custom_styles" ]
+
+[node name="BlueprintImg" type="Sprite" parent="Blueprint" index="1"]
+
+position = Vector2( 521.15, 301.736 )
+scale = Vector2( 0.466478, 0.491432 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="closeButton" type="Button" parent="Blueprint" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 446.0
+margin_top = 458.0
+margin_right = 624.0
+margin_bottom = 503.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Close"
+flat = false
+align = 1
+_sections_unfolded = [ "Visibility" ]
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_MenuButton_pressed"]
+
+[connection signal="pressed" from="Blueprint/closeButton" to="." method="_on_closeButton_pressed"]
+
+

@@ -27,7 +27,7 @@ extents = Vector2( 23.6962, 79.1113 )
 custom_solver_bias = 0.0
 extents = Vector2( 12.4534, 79.2206 )
 
-[node name="TileMap" type="TileMap" index="0"]
+[node name="TileMap" type="TileMap"]
 
 position = Vector2( -410.534, 235.677 )
 mode = 0
