@@ -235,7 +235,7 @@ texture = ExtResource( 7 )
 normal_map = null
 h_frames = 1
 v_frames = 1
-_sections_unfolded = [ "Process Material", "Textures", "Visibility" ]
+_sections_unfolded = [ "Material", "Process Material", "Textures", "Visibility" ]
 
 [node name="Light2D2" type="Light2D" parent="." index="8"]
 
